@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_Activity">
+
+    <activity
+        android:id="@+id/home_Activity"
+        android:name="com.example.fitme.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/progress_Activity"
+        android:name="com.example.fitme.Progress"
+        android:label="fragment_progress"
+        tools:layout="@layout/activity_progress" />
+    <activity
+        android:id="@+id/camara_Activity"
+        android:name="com.example.fitme.Camera"
+        android:label="fragment_camara"
+        tools:layout="@layout/activity_camera" />
+    <activity
+        android:id="@+id/search_Activity"
+        android:name="com.example.fitme.AddIntake"
+        android:label="fragment_search"
+        tools:layout="@layout/activity_add_intake" />
+    <activity
+        android:id="@+id/profile_Activity"
+        android:name="com.example.fitme.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/activity_profile" />
+</navigation>

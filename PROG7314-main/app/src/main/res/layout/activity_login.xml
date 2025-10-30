@@ -105,16 +105,26 @@
 
             <!-- Google Login -->
             <Button
-                android:id="@+id/btnGoogleLogin"
+                android:id="@+id/btnBiometricScan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Continue with Google"
+                android:layout_marginBottom="12dp"
 
                 android:backgroundTint="@android:color/white"
-                android:textColor="@color/black"
-                android:layout_marginBottom="12dp"/>
+                android:text="Use Biometric Scan"
+                android:textColor="@color/black" />
 
             <!-- Terms & Conditions -->
+            <Button
+                android:id="@+id/btnGoogleLogin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+
+                android:backgroundTint="@android:color/white"
+                android:text="Continue with Google"
+                android:textColor="@color/black" />
+
             <Button
                 android:id="@+id/btnRegisterNav"
                 android:layout_width="match_parent"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Transparent inside so your @color/background_red shows through -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Rounded corners (optional) -->
+    <corners android:radius="12dp" />
+
+    <!-- White border -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/white" />
+</shape>

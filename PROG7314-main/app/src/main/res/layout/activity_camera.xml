@@ -9,17 +9,11 @@
     android:padding="16dp"
     tools:context=".Camera">
 
-    <!-- Title -->
-
-    <!-- Button -->
-
-    <!-- Bottom Navigation Bar -->
-
     <TextView
         android:id="@+id/tvCameraTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Camera"
+        android:text="@string/camera_title"
         android:textColor="@android:color/white"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -34,7 +28,7 @@
         android:layout_width="145dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/background_red"
-        android:text="Open Camera"
+        android:text="@string/open_camera_button"
         android:textAllCaps="false"
         android:textStyle="bold"
         android:textColor="@android:color/white"

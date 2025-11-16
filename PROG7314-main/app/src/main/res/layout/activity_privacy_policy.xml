@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="PRIVACY POLICY"
+        app:title="@string/title_privacy_policy"
         app:titleTextColor="@android:color/white"
         app:navigationIcon="@drawable/ic_back" />
 
@@ -32,10 +32,6 @@
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:lineSpacingExtra="4dp"
-            android:text="PRIVACY POLICY\n\n
-1. Information Collection\nWe collect minimal user data to improve service.\n\n
-2. Data Usage\nYour information will not be shared with third parties without consent.\n\n
-3. Security\nWe use standard security practices to protect user data.\n\n
-4. Contact\nFor any questions, contact support@gmail.com\n\n" />
+            android:text="@string/privacy_policy_text" />
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

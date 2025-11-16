@@ -19,10 +19,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_progress_w"
-        app:title="PROGRESS REPORT"
+        app:title="@string/progress_report_title"
         app:titleTextColor="@android:color/white" />
 
-    <!-- Scrollable content goes here -->
+    <!-- Scrollable content -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,8 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- === Your existing scrollable content starts here === -->
-
             <!-- Overall Progress Section -->
             <LinearLayout
                 android:orientation="vertical"
@@ -45,7 +43,7 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:text="Overall Progress"
+                    android:text="@string/overall_progress"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_marginBottom="8dp"
@@ -83,7 +81,7 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:text="Daily Calorie Count"
+                    android:text="@string/daily_calorie_count"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_marginBottom="8dp"
@@ -147,7 +145,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Today's Intake"
+                        android:text="@string/todays_intake"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
@@ -157,7 +155,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:text="Total: 916"
+                        android:text="@string/total_calories"
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textColor="@android:color/black" />
@@ -170,7 +168,7 @@
                         android:backgroundTint="@color/background_red"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
-                        android:text="Add +"
+                        android:text="@string/add_intake"
                         android:textColor="@android:color/white"
                         android:textSize="13sp" />
                 </LinearLayout>
@@ -197,6 +195,7 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
+            <!-- Bottom Navigation -->
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavigationView"
                 android:layout_width="match_parent"
@@ -204,6 +203,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:menu="@menu/bottom_nav_menu"
                 tools:layout_editor_absoluteX="0dp" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

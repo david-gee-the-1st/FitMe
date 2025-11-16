@@ -9,29 +9,27 @@
     android:background="@color/background_red"
     tools:context=".Settings">
 
-    <!-- Toolbar -->
-
+    <!-- Back Button -->
     <Button
         android:id="@+id/btnBackProfile"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Back to profile"
+        android:text="@string/back_to_profile"
         android:textStyle="bold"
         app:backgroundTint="@android:color/transparent" />
 
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/settingsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="SETTINGS"
+        app:title="@string/settings_title"
         app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_settings_w"/>
 
-
     <!-- Content -->
-
     <ScrollView
         android:background="@color/main_background_red"
         android:layout_width="match_parent"
@@ -44,10 +42,9 @@
             android:layout_height="wrap_content">
 
             <!-- Account Settings -->
-
             <TextView
                 android:textColor="@color/black"
-                android:text="Account Settings"
+                android:text="@string/account_settings"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginBottom="8dp"
@@ -75,7 +72,7 @@
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Edit profile"
+                        android:text="@string/edit_profile"
                         android:textAlignment="textStart"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconGravity="end"
@@ -88,7 +85,7 @@
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Change password"
+                        android:text="@string/change_password"
                         android:textAlignment="textStart"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconGravity="end"
@@ -104,7 +101,7 @@
 
                         <TextView
                             android:textColor="@color/white"
-                            android:text="Push notifications"
+                            android:text="@string/push_notifications"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -131,7 +128,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Dark mode"
+                            android:text="@string/dark_mode"
                             android:textSize="14sp" />
 
                         <Switch
@@ -147,7 +144,7 @@
             <!-- Other Settings -->
             <TextView
                 android:textColor="@color/black"
-                android:text="More"
+                android:text="@string/more_settings"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginBottom="8dp"
@@ -174,7 +171,7 @@
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="About us"
+                        android:text="@string/about_us"
                         android:textAlignment="textStart"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconGravity="end"
@@ -187,7 +184,7 @@
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Privacy policy"
+                        android:text="@string/privacy_policy"
                         android:textAlignment="textStart"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconGravity="end"
@@ -200,7 +197,7 @@
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Terms and conditions"
+                        android:text="@string/terms_conditions"
                         android:textAlignment="textStart"
                         app:icon="@drawable/ic_arrow_right"
                         app:iconGravity="end"

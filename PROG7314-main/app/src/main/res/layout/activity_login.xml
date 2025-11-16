@@ -6,7 +6,6 @@
     android:background="@color/main_background_red"
     android:id="@+id/main">
 
-
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/loginToolbar"
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="LOG IN"
+        app:title="@string/title_login"
         app:titleTextColor="@android:color/white" />
 
     <!-- Scrollable content -->
@@ -31,7 +30,6 @@
             android:layout_height="wrap_content">
 
             <!-- Card for login fields -->
-
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,7 +48,7 @@
                         android:id="@+id/etUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Username"
+                        android:hint="@string/hint_username"
                         android:padding="12dp"
                         android:layout_marginBottom="12dp"
                         android:inputType="textEmailAddress" />
@@ -60,7 +58,7 @@
                         android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        android:hint="@string/hint_password"
                         android:padding="12dp"
                         android:layout_marginBottom="16dp"
                         android:inputType="textPassword" />
@@ -70,7 +68,7 @@
                         android:id="@+id/btnLogin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Continue"
+                        android:text="@string/btn_continue"
                         android:backgroundTint="@color/background_red"
                         android:textColor="@android:color/white"/>
                 </LinearLayout>
@@ -93,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  or  "
+                    android:text="@string/text_or"
                     android:textColor="@color/black" />
 
                 <View
@@ -108,25 +106,25 @@
                 android:id="@+id/btnGoogleLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Continue with Google"
-
+                android:text="@string/btn_continue_google"
                 android:backgroundTint="@android:color/white"
                 android:textColor="@color/black"
                 android:layout_marginBottom="12dp"/>
 
-            <!-- Terms & Conditions -->
+            <!-- Register link -->
             <Button
                 android:id="@+id/btnRegisterNav"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:backgroundTint="@android:color/transparent"
-                android:text="Register?" />
+                android:text="@string/btn_register" />
 
+            <!-- Terms -->
             <TextView
                 android:id="@+id/tvTerms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="By clicking continue, you agree to our Terms of Service and Privacy Policy"
+                android:text="@string/text_terms"
                 android:textSize="12sp"
                 android:gravity="center"
                 android:layout_marginTop="20dp"

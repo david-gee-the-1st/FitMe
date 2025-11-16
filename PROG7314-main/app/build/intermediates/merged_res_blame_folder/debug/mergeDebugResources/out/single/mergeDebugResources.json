@@ -1,0 +1,254 @@
+[
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_main.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_bg_streak_frame.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/bg_streak_frame.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_about_us.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_about_us.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_arrow_right_w.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_arrow_right_w.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_settings.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_google.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_google.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_home_w.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_home_w.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_abs.png.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/abs.png"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_profile_w.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_profile_w.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_arrow_right.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_arrow_right.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_search.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_edittext_bg.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/edittext_bg.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_camera.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_camera.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_profile_editor.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_profile_editor.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_chest.png.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/chest.png"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_back.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_calendar.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_calendar.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_progress_w.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_progress_w.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_password_change.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_password_change.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_home.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_leg.png.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/leg.png"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_camera.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_register.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.fitme.app-main-51:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_settings.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_progress.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_progress.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_back.png.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/back.png"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_rounded_view.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/rounded_view.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_profile.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_add_intake.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_add_intake.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_terms_and_conditions.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_terms_and_conditions.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_arm.png.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/arm.png"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_item_food.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/item_food.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_food.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_food.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_visibility_off.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_visibility_off.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_home.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_visibility.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_visibility.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_bg_exe_frame.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/bg_exe_frame.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.fitme.app-main-51:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_google_icon.png.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/google_icon.png"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_bg_background_framed.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/bg_background_framed.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_login.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_progress.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_progress.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_fitme.jpg.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/fitme.jpg"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/drawable_ic_settings_w.xml.flat",
+        "source": "com.example.fitme.app-main-51:/drawable/ic_settings_w.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_profile.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_activity_privacy_policy.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/activity_privacy_policy.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/layout_item_food_intake.xml.flat",
+        "source": "com.example.fitme.app-main-51:/layout/item_food_intake.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/xml_backup_rules.xml.flat",
+        "source": "com.example.fitme.app-main-51:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-49:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.fitme.app-main-51:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

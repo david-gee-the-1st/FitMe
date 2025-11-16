@@ -1,0 +1,258 @@
+[
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_arrow_right_w.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_arrow_right_w.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_profile_editor.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_profile_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_visibility_off.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_visibility_off.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_profile_w.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_profile_w.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_password_change.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_password_change.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_google.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_google.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_progress.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_chest.png.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\chest.png"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_progress.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_terms_and_conditions.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_terms_and_conditions.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_about_us.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_about_us.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_progress_w.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_progress_w.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_settings_w.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_settings_w.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_item_food_intake.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\item_food_intake.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_rounded_view.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\rounded_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_add_intake.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_add_intake.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_visibility.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_visibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_camera.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_food.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_food.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_item_food.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\item_food.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.fitme.app-debug-57:/layout_activity_home.xml.flat",
+        "source": "com.example.fitme.app-main-59:/layout/activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_back.png.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_home_w.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_home_w.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_arm.png.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\arm.png"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_bg_exe_frame.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\bg_exe_frame.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_camera.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_google_icon.png.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\google_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_bg_background_framed.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\bg_background_framed.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\layout_activity_privacy_policy.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\layout\\activity_privacy_policy.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_leg.png.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\leg.png"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_bg_streak_frame.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\bg_streak_frame.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_abs.png.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\abs.png"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_edittext_bg.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\edittext_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_fitme.jpg.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\fitme.jpg"
+    },
+    {
+        "merged": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-debug-57:\\drawable_ic_calendar.xml.flat",
+        "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\daemon\\8.13\\com.example.fitme.app-main-59:\\drawable\\ic_calendar.xml"
+    }
+]

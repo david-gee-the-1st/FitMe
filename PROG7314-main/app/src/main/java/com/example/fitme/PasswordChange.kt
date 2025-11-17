@@ -1,7 +1,9 @@
 package com.example.fitme
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -9,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.widget.Button
 
 class PasswordChange : AppCompatActivity() {
 
@@ -31,17 +32,15 @@ class PasswordChange : AppCompatActivity() {
         btnChangePassword = findViewById(R.id.btnChangePassword)
         toolbar = findViewById(R.id.changePasswordToolbar)
 
-        setupListeners()
-
-        val toolbar = findViewById<Toolbar>(R.id.changePasswordToolbar)
+        // Setup toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
 
-    private fun setupListeners() {
-        // Back button in toolbar
+        // Back navigation to Settings
         toolbar.setNavigationOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            val intent = Intent(this, Settings::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
         }
 
         // Change password button
@@ -83,11 +82,10 @@ class PasswordChange : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        finish()
+        // Navigate back to Settings when toolbar back icon is pressed
+        val intent = Intent(this, Settings::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        startActivity(intent)
         return true
     }
 }
-/*
-Reference list:
-The FULL Beginner Guide for Room in Android | Local Database Tutorial for Android. 2023. YouTube video, added by Philipp Lackner. [Online]. Available at: https://www.youtube.com/watch?v=bOd3wO0uFr8 [Accessed 22 September 2025].
- */

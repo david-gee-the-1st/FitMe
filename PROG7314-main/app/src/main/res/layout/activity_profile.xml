@@ -17,7 +17,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:navigationIcon="@drawable/ic_profile_w"
         app:title="@string/profile_title"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@color/white" />
 
     <!-- Profile Overview Section -->
     <LinearLayout

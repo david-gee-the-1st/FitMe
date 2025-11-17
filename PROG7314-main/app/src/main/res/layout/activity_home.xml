@@ -239,6 +239,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/background_red"
                     android:orientation="vertical"
+                    android:layout_marginTop="10dp"
                     android:padding="16dp">
 
                     <LinearLayout

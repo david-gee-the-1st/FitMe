@@ -9,6 +9,7 @@ import android.widget.Switch
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -17,6 +18,7 @@ class Settings : AppCompatActivity() {
     private val NOTIF_PERMISSION = 1001
     private lateinit var notificationHelper: NotificationHelper
     private lateinit var switchNotifications: Switch
+    private lateinit var switchDarkMode: Switch
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,23 +31,21 @@ class Settings : AppCompatActivity() {
             insets
         }
 
-        // Initialize notification helper
+        val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+
+        // Notification switch setup
+
         notificationHelper = NotificationHelper(this)
         notificationHelper.createNotificationChannel()
 
-        // Initialize switch
         switchNotifications = findViewById(R.id.switchNotifications)
-
-        // Load saved switch state
-        val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
-        val savedState = prefs.getBoolean("notifications_enabled", false)
-        switchNotifications.isChecked = savedState
+        val savedNotifState = prefs.getBoolean("notifications_enabled", false)
+        switchNotifications.isChecked = savedNotifState
 
         switchNotifications.setOnCheckedChangeListener { _, isChecked ->
             saveSwitchState(isChecked)
 
             if (isChecked) {
-                // Request notification permission for Android 13+
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
                     checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS)
                     != PackageManager.PERMISSION_GRANTED
@@ -61,7 +61,20 @@ class Settings : AppCompatActivity() {
             }
         }
 
+        // Dark mode switch setup
+
+        switchDarkMode = findViewById(R.id.switchDarkMode)
+        val isDarkModeEnabled = prefs.getBoolean("dark_mode_enabled", false)
+        switchDarkMode.isChecked = isDarkModeEnabled
+        setDarkMode(isDarkModeEnabled)  // apply saved state on launch
+
+        switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
+            setDarkMode(isChecked)
+            prefs.edit().putBoolean("dark_mode_enabled", isChecked).apply()
+        }
+
         // Navigation Buttons
+
         val btnBackProfile: Button = findViewById(R.id.btnBackProfile)
         val btnEditProfile: Button = findViewById(R.id.btnEditProfile)
         val btnChangePassword: Button = findViewById(R.id.btnChangePassword)
@@ -80,6 +93,16 @@ class Settings : AppCompatActivity() {
     private fun saveSwitchState(state: Boolean) {
         val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
         prefs.edit().putBoolean("notifications_enabled", state).apply()
+    }
+
+    private fun setDarkMode(enabled: Boolean) {
+        if (enabled) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            Toast.makeText(this, "Dark mode ON", Toast.LENGTH_SHORT).show()
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            Toast.makeText(this, "Dark mode OFF", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onRequestPermissionsResult(

@@ -15,7 +15,7 @@
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:title="@string/register_title"
-        app:titleTextColor="@android:color/white"
+        app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_profile_w" />
 
     <!-- Scrollable content -->
@@ -150,7 +150,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/register_button"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/white"
                         app:backgroundTint="@null"
                         android:background="@drawable/bg_background_framed"
                         android:textStyle="bold"
@@ -167,7 +167,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/already_have_account"
-                            android:textColor="@android:color/white"/>
+                            android:textColor="@color/white"/>
 
                         <Button
                             android:id="@+id/btnLoginNav"

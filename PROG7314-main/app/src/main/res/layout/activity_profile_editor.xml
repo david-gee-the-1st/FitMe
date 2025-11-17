@@ -12,7 +12,7 @@
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:title="@string/edit_profile_title"
-        app:titleTextColor="@android:color/white"
+        app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_back" />
 
     <!-- Scrollable content -->
@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_username"
                         android:textColorHint="@color/white"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/white"
                         android:background="@drawable/bg_background_framed"
                         android:padding="12dp"
                         android:layout_marginBottom="16dp"
@@ -64,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_email"
                         android:textColorHint="@color/white"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/white"
                         android:background="@drawable/bg_background_framed"
                         android:padding="12dp"
                         android:layout_marginBottom="16dp"
@@ -85,7 +85,7 @@
                             android:layout_weight="1"
                             android:hint="@string/hint_height"
                             android:textColorHint="@color/white"
-                            android:textColor="@android:color/white"
+                            android:textColor="@color/white"
                             android:background="@drawable/bg_background_framed"
                             android:padding="12dp"
                             android:inputType="numberDecimal"
@@ -98,7 +98,7 @@
                             android:layout_weight="1"
                             android:hint="@string/hint_weight"
                             android:textColorHint="@color/white"
-                            android:textColor="@android:color/white"
+                            android:textColor="@color/white"
                             android:background="@drawable/bg_background_framed"
                             android:padding="12dp"
                             android:inputType="numberDecimal" />
@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_phone"
                         android:textColorHint="@color/white"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/white"
                         android:background="@drawable/bg_background_framed"
                         android:padding="12dp"
                         android:inputType="phone"
@@ -125,7 +125,7 @@
                         android:layout_marginTop="30dp"
                         android:background="@drawable/bg_background_framed"
                         android:text="@string/btn_save_changes"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/white"
                         android:textStyle="bold"
                         app:backgroundTint="@null" />
                 </LinearLayout>

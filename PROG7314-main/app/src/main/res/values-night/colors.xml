@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard colors -->
+    <color name="black">#FFFFFF</color>             <!-- white in night mode -->
+    <color name="white">#B0B0B0</color>             <!-- lighter grey -->
+
+    <!-- Backgrounds -->
+    <color name="main_background_red">#424242</color>  <!-- medium-dark grey -->
+    <color name="background_red">#000000</color>       <!-- black -->
+
+    <!-- Progress bar -->
+    <color name="progress_bar">#232323</color>        <!-- very dark grey -->
+</resources>

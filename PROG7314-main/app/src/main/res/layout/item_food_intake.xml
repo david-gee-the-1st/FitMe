@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/food_name"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tvFoodCalories"

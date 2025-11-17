@@ -31,10 +31,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:navigationIcon="@drawable/ic_food"
-                app:navigationIconTint="@android:color/white"
+                app:navigationIconTint="@color/white"
                 app:title="@string/calories_title"
                 app:titleCentered="true"
-                app:titleTextColor="@android:color/white" />
+                app:titleTextColor="@color/white" />
 
             <!-- Add Food Intake Section -->
             <LinearLayout
@@ -87,10 +87,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/btn_save"
-                    android:textColor="@android:color/white"
                     android:background="@drawable/bg_background_framed"
-                    app:backgroundTint="@null"/>
+                    android:text="@string/btn_save"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@null" />
             </LinearLayout>
 
             <!-- Search Section -->
@@ -145,7 +145,7 @@
                         android:layout_weight="0.2"
                         android:text="@string/btn_add_food"
                         android:textSize="22sp"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/white"
                         android:background="@drawable/bg_background_framed"
                         app:backgroundTint="@null"/>
                 </LinearLayout>
@@ -175,7 +175,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:text="@string/search_results"
-                        android:textColor="@android:color/black"
+                        android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -186,7 +186,7 @@
                         android:layout_weight="0.5"
                         android:gravity="end"
                         android:text="@string/total_searches"
-                        android:textColor="@android:color/black"
+                        android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>

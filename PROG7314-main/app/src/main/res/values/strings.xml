@@ -137,4 +137,10 @@
     <string name="food_name">Food Name</string>
     <string name="calories">Calories</string>
     <string name="food_calories_example">123 kcal</string>
+
+    <string name="legs_title">LEGS</string>
+    <string name="arms_title">ARMS</string>
+    <string name="chest_title">CHEST</string>
+    <string name="back_title">BACK</string>
+    <string name="abs_title">ABS</string>
 </resources>

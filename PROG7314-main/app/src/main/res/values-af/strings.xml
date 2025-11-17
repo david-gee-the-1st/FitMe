@@ -135,4 +135,10 @@
     <string name="food_name">Kos Naam</string>
     <string name="calories">Kalorieë</string>
     <string name="food_calories_example">123 kcal</string>
+
+    <string name="legs_title">BENE</string>
+    <string name="arms_title">ARMS</string>
+    <string name="chest_title">BORS</string>
+    <string name="back_title">RUG</string>
+    <string name="abs_title">ABS</string>
 </resources>

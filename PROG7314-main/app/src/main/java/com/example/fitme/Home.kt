@@ -2,6 +2,8 @@ package com.example.fitme
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,6 +20,20 @@ class Home : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Navigation Image Buttons
+
+        val btnLegs: ImageButton = findViewById(R.id.btnLegs)
+        val btnArms: ImageButton = findViewById(R.id.btnArms)
+        val btnChest: ImageButton = findViewById(R.id.btnChest)
+        val btnBack: ImageButton = findViewById(R.id.btnBack)
+        val btnAbs: ImageButton = findViewById(R.id.btnAbs)
+
+        btnLegs.setOnClickListener { startActivity(Intent(this, Legs::class.java)) }
+        btnArms.setOnClickListener { startActivity(Intent(this, Arms::class.java)) }
+        btnChest.setOnClickListener { startActivity(Intent(this, Chest::class.java)) }
+        btnBack.setOnClickListener { startActivity(Intent(this, Back::class.java)) }
+        btnAbs.setOnClickListener { startActivity(Intent(this, Abs::class.java)) }
 
         //Bottom Navigation View:
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigationView)

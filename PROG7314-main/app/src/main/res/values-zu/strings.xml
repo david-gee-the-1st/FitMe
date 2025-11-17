@@ -135,4 +135,10 @@
     <string name="food_name">Igama Lokudla</string>
     <string name="calories">Amakalori</string>
     <string name="food_calories_example">123 kcal</string>
+
+    <string name="legs_title">IMILENZA</string>
+    <string name="arms_title">IZINGALO</string>
+    <string name="chest_title">ISIFUBA</string>
+    <string name="back_title">EMUVA</string>
+    <string name="abs_title">AMA-ABS</string>
 </resources>

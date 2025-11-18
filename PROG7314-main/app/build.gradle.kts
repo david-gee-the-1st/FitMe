@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -60,34 +61,30 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.cardview)
 
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.0")
-    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
-
     // Room runtime
     implementation(libs.androidx.room.runtime)
 
     // Kotlin extensions + Coroutines support
     implementation(libs.androidx.room.ktx)
 
-    // Annotation processor (Java)
-    annotationProcessor(libs.androidx.room.compiler)
-
-    // ksp for Kotlin
-    ksp(libs.androidx.room.compiler.v281)
+    // ksp for Kotlin (Room compiler)
+    ksp(libs.androidx.room.compiler)
 
     // (Optional) Testing Room
     testImplementation(libs.androidx.room.testing)
+
+    // Kotlin Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
     //Retrofit:
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-
     //Biometric Authentication:
     implementation("androidx.biometric:biometric-ktx:1.4.0-alpha02")
 
-    //Realtime Firebase Database:
+    //Firebase Database:
     implementation(libs.firebase.database)
     implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
     implementation("com.google.firebase:firebase-auth")

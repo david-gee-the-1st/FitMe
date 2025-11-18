@@ -18,12 +18,18 @@ import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
 import android.widget.EditText
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.launch
 
 class AddIntake : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: FoodAdapter
     private val foodList = mutableListOf<AuthResponse>()
+    private lateinit var foodViewModel: FoodIntakeViewModel
+    private lateinit var sessionManager: SessionManager
 
     private fun getCurrentDate(): String {
         val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
@@ -39,6 +45,13 @@ class AddIntake : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        sessionManager = SessionManager(this) //Make use of the sessionManager.getUserId() to get the userID
+        foodViewModel = ViewModelProvider(this)[FoodIntakeViewModel::class.java]
+
+
+       //Toast.makeText(this@AddIntake, sessionManager.getUserId(), Toast.LENGTH_SHORT).show()
+
 
         // Initialize RecyclerView
         recyclerView = findViewById(R.id.foodListRecyclerView)
@@ -72,7 +85,7 @@ class AddIntake : AppCompatActivity() {
                 }
 
                 R.id.nav_search -> {
-                    //No action needed already already at Search
+                    //No action needed already at Search
                     true
                 }
 
@@ -88,10 +101,6 @@ class AddIntake : AppCompatActivity() {
 
         bottomNavigation.selectedItemId = R.id.nav_search
 
-        //getFoodsFromApi()
-        fetchFoodsFromApi()
-
-
         val btnSave = findViewById<com.google.android.material.button.MaterialButton>(R.id.btnSaveIntake)
         val etFoodName = findViewById<EditText>(R.id.etFoodName)
         val etCalories = findViewById<EditText>(R.id.etCalories)
@@ -105,16 +114,34 @@ class AddIntake : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val newFood = AuthResponse(
-                _id = null,
-                name = name,
-                calories = calories,
-                userID = "placeholder-user-id",
-                createdAt = getCurrentDate(),
-                updatedAt = getCurrentDate()
-            )
+            lifecycleScope.launch {
+                val food = AuthResponse(
+                    name = name,
+                    calories = calories,
+                    userID = FirebaseAuth.getInstance().currentUser?.uid,
+                    createdAt = getCurrentDate(),
+                    updatedAt = getCurrentDate()
 
-            addFoodToApi(newFood)
+                )
+
+                val added = foodViewModel.addFoodIntake(food)
+
+                if (added) {
+                    Toast.makeText(this@AddIntake, "Food added!", Toast.LENGTH_SHORT).show()
+                }
+
+
+                val newFood = AuthResponse(
+                    _id = null,
+                    name = name,
+                    calories = calories,
+                    userID = FirebaseAuth.getInstance().currentUser?.uid,
+                    createdAt = getCurrentDate(),
+                    updatedAt = getCurrentDate()
+                )
+
+                addFoodToApi(newFood)
+            }
         }
     }
 
@@ -126,20 +153,27 @@ class AddIntake : AppCompatActivity() {
             override fun onResponse(call: Call<FoodsResponse>, response: Response<FoodsResponse>) {
                 if (response.isSuccessful && response.body() != null) {
                     val data = response.body()!!.data
+
+                    val currentUserId = sessionManager.getUserId()
+
+                    // Filter only foods that match logged in user's ID
+                    val filteredFoods = data.filter { it.userID == currentUserId }
+
                     foodList.clear()
-                    foodList.addAll(data)
+                    foodList.addAll(filteredFoods)
                     adapter.updateData(foodList)
-                    Toast.makeText(this@AddIntake, "Fetched ${data.size} items!", Toast.LENGTH_SHORT).show()
-                    Log.i(TAG, "Fetched ${data.size} items!")
+
+                    Toast.makeText(this@AddIntake, "Fetched ${filteredFoods.size} items!", Toast.LENGTH_SHORT).show()
+                    Log.i(TAG, "Fetched ${filteredFoods.size} items for user $currentUserId")
                 } else {
                     Toast.makeText(this@AddIntake, "Failed: ${response.message()}", Toast.LENGTH_SHORT).show()
-                    Log.e(TAG,"Failed: ${response.message()}")
+                    Log.e(TAG, "Failed: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<FoodsResponse>, t: Throwable) {
                 Toast.makeText(this@AddIntake, "Error: ${t.message}", Toast.LENGTH_LONG).show()
-                Log.e(TAG,"Error: ${t.message}")
+                Log.e(TAG, "Error: ${t.message}")
             }
         })
     }

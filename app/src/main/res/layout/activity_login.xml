@@ -6,7 +6,6 @@
     android:background="@color/main_background_red"
     android:id="@+id/main">
 
-
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/loginToolbar"
@@ -14,8 +13,8 @@
         android:layout_height="wrap_content"
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="LOG IN"
-        app:titleTextColor="@android:color/white" />
+        app:title="@string/title_login"
+        app:titleTextColor="@color/white" />
 
     <!-- Scrollable content -->
     <androidx.core.widget.NestedScrollView
@@ -31,7 +30,6 @@
             android:layout_height="wrap_content">
 
             <!-- Card for login fields -->
-
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,7 +48,7 @@
                         android:id="@+id/etUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Username"
+                        android:hint="@string/hint_username"
                         android:padding="12dp"
                         android:layout_marginBottom="12dp"
                         android:inputType="textEmailAddress" />
@@ -60,7 +58,7 @@
                         android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        android:hint="@string/hint_password"
                         android:padding="12dp"
                         android:layout_marginBottom="16dp"
                         android:inputType="textPassword" />
@@ -70,9 +68,9 @@
                         android:id="@+id/btnLogin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Continue"
+                        android:text="@string/btn_continue"
                         android:backgroundTint="@color/background_red"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@color/white"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -93,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  or  "
+                    android:text="@string/text_or"
                     android:textColor="@color/black" />
 
                 <View
@@ -108,22 +106,10 @@
                 android:id="@+id/btnBiometricScan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-
-                android:backgroundTint="@android:color/white"
-                android:text="Use Biometric Scan"
-                android:textColor="@color/black" />
-
-            <!-- Terms & Conditions -->
-            <Button
-                android:id="@+id/btnGoogleLogin2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-
-                android:backgroundTint="@android:color/white"
-                android:text="Continue with Google"
-                android:textColor="@color/black" />
+                android:text="@string/btn_continue_google"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp"/>
 
             <Button
                 android:id="@+id/buttonLogin"
@@ -134,22 +120,25 @@
                 android:text="SSO Login"
                 android:textColor="@color/black"/>
 
+
+            <!-- Register link -->
             <Button
                 android:id="@+id/btnRegisterNav"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:backgroundTint="@android:color/transparent"
-                android:text="Register?" />
+                android:text="@string/btn_register" />
 
+            <!-- Terms -->
             <TextView
                 android:id="@+id/tvTerms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:text="@string/text_terms"
+                android:textSize="12sp"
                 android:gravity="center"
-                android:text="By clicking continue, you agree to our Terms of Service and Privacy Policy"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

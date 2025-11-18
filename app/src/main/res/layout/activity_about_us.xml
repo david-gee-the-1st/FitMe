@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="ABOUT US"
-        app:titleTextColor="@android:color/white"
+        app:title="@string/about_title"
+        app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_back" />
 
     <!-- Scrollable content -->
@@ -35,7 +35,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/fitme"
-                android:contentDescription="FitMe Logo"
+                android:contentDescription="@string/app_logo_description"
                 android:layout_marginBottom="16dp" />
 
             <!-- App Name -->
@@ -43,10 +43,10 @@
                 android:id="@+id/tvAppName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FitMe"
+                android:text="@string/app_name_label"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:textColor="@color/black"
                 android:layout_marginBottom="8dp" />
 
             <!-- Tagline -->
@@ -54,8 +54,8 @@
                 android:id="@+id/tvTagline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your Personal Fitness Companion"
-                android:textColor="@android:color/black"
+                android:text="@string/app_tagline"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="24dp" />
@@ -73,15 +73,11 @@
                     android:id="@+id/tvAboutDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/white"
                     android:textSize="14sp"
                     android:padding="20dp"
                     android:lineSpacingExtra="6dp"
-                    android:text="FitMe is a modern fitness tracking app designed to help you reach your health goals faster. Whether you’re just starting out or an experienced athlete, FitMe provides everything you need — from personalized workouts and progress tracking to nutrition insights and motivation tools.
-
-With an intuitive interface and smart data tracking, FitMe empowers you to stay consistent, track your performance, and become the best version of yourself.
-
-Our mission is to make fitness simple, accessible, and rewarding for everyone." />
+                    android:text="@string/about_description" />
             </androidx.cardview.widget.CardView>
 
             <!-- Version Info -->
@@ -89,8 +85,8 @@ Our mission is to make fitness simple, accessible, and rewarding for everyone." 
                 android:id="@+id/tvVersion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Version 1.0.0"
-                android:textColor="@android:color/black"
+                android:text="@string/version_label"
+                android:textColor="@color/black"
                 android:textStyle="italic"
                 android:layout_marginBottom="16dp" />
 
@@ -99,9 +95,9 @@ Our mission is to make fitness simple, accessible, and rewarding for everyone." 
                 android:id="@+id/tvContact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                android:textColor="@color/black"
                 android:textSize="14sp"
-                android:text="📧 support@fitmeapp.com\n🌐 www.fitmeapp.com"
+                android:text="@string/contact_info"
                 android:gravity="center"
                 android:layout_marginBottom="40dp" />
         </LinearLayout>

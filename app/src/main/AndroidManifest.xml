@@ -13,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitMe">
         <activity
+            android:name=".Abs"
+            android:exported="false" />
+        <activity
+            android:name=".Back"
+            android:exported="false" />
+        <activity
+            android:name=".Chest"
+            android:exported="false" />
+        <activity
+            android:name=".Arms"
+            android:exported="false" />
+        <activity
+            android:name=".Legs"
+            android:exported="false" />
+        <activity
             android:name=".Progress"
             android:exported="false" />
         <activity

@@ -10,14 +10,13 @@
     android:layout_height="match_parent">
 
     <!-- Toolbar -->
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/settingsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background_red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Home"
+        app:title="@string/home_title"
         app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_home_w" />
 
@@ -49,7 +48,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EXERCISES"
+                        android:text="@string/exercises_title"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
@@ -65,7 +64,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/bg_streak_frame"
                         android:backgroundTint="@color/black"
-                        android:text="View all"
+                        android:text="@string/view_all"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
@@ -94,7 +93,7 @@
                             android:adjustViewBounds="true"
                             android:background="@drawable/bg_exe_frame"
                             android:backgroundTint="@color/black"
-                            android:contentDescription="Legs"
+                            android:contentDescription="@string/legs"
                             android:padding="8dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/leg" />
@@ -103,7 +102,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Legs"
+                            android:text="@string/legs"
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -125,7 +124,7 @@
                             android:adjustViewBounds="true"
                             android:background="@drawable/bg_exe_frame"
                             android:backgroundTint="@color/black"
-                            android:contentDescription="Arms"
+                            android:contentDescription="@string/arms"
                             android:padding="8dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/arm" />
@@ -134,7 +133,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Arms"
+                            android:text="@string/arms"
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -156,7 +155,7 @@
                             android:adjustViewBounds="true"
                             android:background="@drawable/bg_exe_frame"
                             android:backgroundTint="@color/black"
-                            android:contentDescription="Chest"
+                            android:contentDescription="@string/chest"
                             android:padding="8dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/chest" />
@@ -165,7 +164,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Chest"
+                            android:text="@string/chest"
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -187,7 +186,7 @@
                             android:adjustViewBounds="true"
                             android:background="@drawable/bg_exe_frame"
                             android:backgroundTint="@color/black"
-                            android:contentDescription="Back"
+                            android:contentDescription="@string/back"
                             android:padding="8dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/back" />
@@ -196,7 +195,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Back"
+                            android:text="@string/back"
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -218,7 +217,7 @@
                             android:adjustViewBounds="true"
                             android:background="@drawable/bg_exe_frame"
                             android:backgroundTint="@color/black"
-                            android:contentDescription="Abs"
+                            android:contentDescription="@string/abs"
                             android:padding="8dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/abs" />
@@ -227,18 +226,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Abs"
+                            android:text="@string/abs"
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- PREVIOUS IMAGES SECTION -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/background_red"
                     android:orientation="vertical"
+                    android:layout_marginTop="10dp"
                     android:padding="16dp">
 
                     <LinearLayout
@@ -250,7 +251,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="PREVIOUS IMAGES"
+                            android:text="@string/previous_images_title"
                             android:textAllCaps="true"
                             android:textColor="@color/white"
                             android:textSize="16sp" />
@@ -265,7 +266,7 @@
                             android:layout_width="66dp"
                             android:layout_height="match_parent"
                             android:background="@drawable/bg_streak_frame"
-                            android:text="View all"
+                            android:text="@string/view_all"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
@@ -279,17 +280,16 @@
                         android:clipToPadding="false"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp" />
-
                 </LinearLayout>
 
             </LinearLayout>
+
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavigationView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:menu="@menu/bottom_nav_menu"
-                tools:layout_editor_absoluteX="0dp" />
+                app:menu="@menu/bottom_nav_menu" />
         </LinearLayout>
 
     </ScrollView>

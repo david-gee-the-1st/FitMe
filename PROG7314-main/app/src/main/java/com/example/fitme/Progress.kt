@@ -86,6 +86,7 @@ class Progress : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         setupBottomNavigation()
+        fetchFoodsFromApi()
     }
 
     private fun observeViewModel() {
@@ -174,11 +175,46 @@ class Progress : AppCompatActivity() {
         }
     }
 
+    private fun updateLineChartWithToday(todayCalories: Double) {
+        val lineChart: LineChart = binding.lineChart
+
+        val entries = mutableListOf<Entry>()
+
+        // Add previous data (fake or existing from ViewModel)
+        // Example: Replace with actual weekly data if available
+        entries.add(Entry(0f, 1200f)) // Monday
+        entries.add(Entry(1f, 1500f)) // Tuesday
+        entries.add(Entry(2f, 1300f)) // Wednesday
+        entries.add(Entry(3f, 1600f)) // Thursday
+        entries.add(Entry(4f, 1400f)) // Friday
+
+        //Add today (new entry)
+        val todayIndex = entries.size
+        entries.add(Entry(todayIndex.toFloat(), todayCalories.toFloat()))
+
+        val dataSet = LineDataSet(entries, "Calorie Intake").apply {
+            color = Color.RED
+            valueTextColor = Color.BLACK
+            lineWidth = 2f
+            circleRadius = 4f
+            setCircleColor(Color.RED)
+            setDrawValues(true)
+        }
+
+        lineChart.xAxis.valueFormatter = com.github.mikephil.charting.formatter.IndexAxisValueFormatter(
+            listOf("Mon", "Tue", "Wed", "Thu", "Fri", "Today")
+        )
+
+        lineChart.data = LineData(dataSet)
+        lineChart.invalidate()
+    }
+
+
+
     private fun calculateTodayCalories(foodList: List<AuthResponse>): Double {
         val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-        val today = sdf.format(Date()) // Get today's date
+        val today = sdf.format(Date())
 
-        // Filter foods that were added today and sum their calories
         return foodList
             .filter { it.createdAt?.startsWith(today) == true }
             .sumOf { it.calories ?: 0.0 }
@@ -194,25 +230,28 @@ class Progress : AppCompatActivity() {
             override fun onResponse(call: Call<FoodsResponse>, response: Response<FoodsResponse>) {
                 if (response.isSuccessful && response.body() != null) {
                     val data = response.body()!!.data
-
                     val currentUserId = sessionManager.getUserId()
 
-                    // Filter only foods that match logged in user's ID
+                    // Filter for current user
                     val filteredFoods = data.filter { it.userID == currentUserId }
 
                     foodList.clear()
                     foodList.addAll(filteredFoods)
                     adapter.updateData(foodList)
 
-                    todayCalories = calculateTodayCalories(filteredFoods)
+                    // Calculate today's calories
+                    val todayCalories = calculateTodayCalories(filteredFoods)
+
+                    // Update UI elements
+                    binding.tvCaloriesValue.text = "${todayCalories} Cals"
+                    binding.tvTotalCalories.text = "Total: ${todayCalories}"
+                    binding.progressCalories.progress = todayCalories.toInt()
+
+                    // Send today's calories to chart
+                    updateLineChartWithToday(todayCalories)
+
                     Toast.makeText(this@Progress, "Fetched ${filteredFoods.size} items!", Toast.LENGTH_SHORT).show()
                     Log.i(TAG, "Fetched ${filteredFoods.size} items for user $currentUserId")
-                    // Calculate today's calorie total
-
-
-                } else {
-                    Toast.makeText(this@Progress, "Failed: ${response.message()}", Toast.LENGTH_SHORT).show()
-                    Log.e(TAG, "Failed: ${response.message()}")
                 }
             }
 

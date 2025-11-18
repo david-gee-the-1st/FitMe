@@ -22,6 +22,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.launch
+import kotlin.jvm.java
 
 class AddIntake : AppCompatActivity() {
 
@@ -48,9 +49,6 @@ class AddIntake : AppCompatActivity() {
 
         sessionManager = SessionManager(this) //Make use of the sessionManager.getUserId() to get the userID
         foodViewModel = ViewModelProvider(this)[FoodIntakeViewModel::class.java]
-
-
-       //Toast.makeText(this@AddIntake, sessionManager.getUserId(), Toast.LENGTH_SHORT).show()
 
 
         // Initialize RecyclerView

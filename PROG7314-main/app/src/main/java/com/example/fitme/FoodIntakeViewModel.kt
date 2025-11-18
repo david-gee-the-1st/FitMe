@@ -17,6 +17,7 @@ class FoodIntakeViewModel : ViewModel() {
     // Function to add a food intake document
     suspend fun addFoodIntake(food: AuthResponse): Boolean {
         return try {
+            val db = Firebase.firestore
             val foodCollection = db.collection("FoodIntake")
 
             // Let Firestore generate document ID automatically
@@ -33,6 +34,7 @@ class FoodIntakeViewModel : ViewModel() {
     // Function to retrieve all food intakes for a specific user
     suspend fun getFoodIntakeByUser(userID: String): List<AuthResponse> {
         return try {
+            val db = Firebase.firestore
             val result = db.collection("FoodIntake")
                 .whereEqualTo("userID", userID)
                 .get()

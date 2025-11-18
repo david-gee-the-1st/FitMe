@@ -5,7 +5,7 @@
 
 #Github Link:
 
- https://github.com/jiabou/PROG7314.git
+ https://github.com/david-gee-the-1st/FitMe.git
 
 
 #Video Link:
@@ -23,7 +23,7 @@
 
 #Application Status:
 
- In-development
+ Ready for deployment
 
 
 #Discription
@@ -45,16 +45,20 @@
  View Intakes - The user may view all intakes in a display list after being entered.
  Search Intakes - Users may search specific intakes by using the name of the drink/food.
  Track Daily Intakes - The total calories of all intakes gets stored, tracked and then displayed.
+ Exercises - Gives the user a list of exercise that they can make use of.
 
 
 #Overview:
 
  Users register or login to FitMe which will allow them to add daily calorie intakes which is stored into a database
  and then display for users to view. These intakes can then be searched and viewed within the home page and Intake page.
+The user can login using Biometric Authentication, single sign-on (SSO), and via their credentials.
  Users may also view their profile and and setting page. On the profile page users may view their profile or go to settings.
- The Settings pages users may go to the differe pages such as Terms and Conditions, Privacy policy, Change Password, Edit
+ The Settings pages users may go to the different pages such as Terms and Conditions, Privacy policy, Change Password, Edit, Dark mode, Real-time Notifications toggle, and Multi-language support.
  Profile and About us. The Change Password and Edit Profile pages allows users to change the details they originally registered
  when they created the account. 
+The Home page include all the workouts that are available. 
+Offline mode allows user to still use the app even if the user does not have an internet connection. 
 
 
 Prerequisites:
@@ -69,11 +73,12 @@ Prerequisites:
 Installation:
 
  -Clone the repository
-   git clone https://github.com/jiabou/PROG7314.git
+   git clone https://github.com/david-gee-the-1st/FitMe.git
    
  -Open Android Studio
  
  -Let Gradle sync and build the project.
  
  -Run the app on an emulator or Android device.
+
 

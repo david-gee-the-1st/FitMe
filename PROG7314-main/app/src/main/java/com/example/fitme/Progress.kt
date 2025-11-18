@@ -1,8 +1,10 @@
 package com.example.fitme
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -13,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.fitme.databinding.ActivityProgressBinding
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
@@ -20,11 +24,22 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class Progress : AppCompatActivity() {
 
+    private lateinit var recyclerView: RecyclerView
     private lateinit var binding: ActivityProgressBinding
     private lateinit var foodIntakeDao: FoodIntakeDao
+    private lateinit var foodViewModel: FoodIntakeViewModel
+    private lateinit var sessionManager: SessionManager
+    private lateinit var adapter: FoodAdapter
+    private val foodList = mutableListOf<AuthResponse>()
 
     private val viewModel: ProgressViewModel by lazy {
         val factory = object : ViewModelProvider.Factory {
@@ -48,6 +63,9 @@ class Progress : AppCompatActivity() {
             insets
         }
 
+        sessionManager = SessionManager(this)
+        foodViewModel = ViewModelProvider(this)[FoodIntakeViewModel::class.java]
+
         // Initialize DB
         foodIntakeDao = FitMeDatabase.getDatabase(this).foodIntakeDao()
 
@@ -60,6 +78,12 @@ class Progress : AppCompatActivity() {
             val intent = Intent(this, AddIntake::class.java)
             startActivity(intent)
         }
+
+        // Initialize RecyclerView
+        recyclerView = findViewById(R.id.foodListRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = FoodAdapter(foodList)
+        recyclerView.adapter = adapter
 
         setupBottomNavigation()
     }
@@ -148,6 +172,57 @@ class Progress : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    private fun calculateTodayCalories(foodList: List<AuthResponse>): Double {
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val today = sdf.format(Date()) // Get today's date
+
+        // Filter foods that were added today and sum their calories
+        return foodList
+            .filter { it.createdAt?.startsWith(today) == true }
+            .sumOf { it.calories ?: 0.0 }
+    }
+
+    private fun fetchFoodsFromApi(): Double  {
+        Toast.makeText(this, "Fetching foods...", Toast.LENGTH_SHORT).show()
+
+        var todayCalories: Double = 0
+
+        val call = ApiClient.authApi.getAllFoods()
+        call.enqueue(object : Callback<FoodsResponse> {
+            override fun onResponse(call: Call<FoodsResponse>, response: Response<FoodsResponse>) {
+                if (response.isSuccessful && response.body() != null) {
+                    val data = response.body()!!.data
+
+                    val currentUserId = sessionManager.getUserId()
+
+                    // Filter only foods that match logged in user's ID
+                    val filteredFoods = data.filter { it.userID == currentUserId }
+
+                    foodList.clear()
+                    foodList.addAll(filteredFoods)
+                    adapter.updateData(foodList)
+
+                    todayCalories = calculateTodayCalories(filteredFoods)
+                    Toast.makeText(this@Progress, "Fetched ${filteredFoods.size} items!", Toast.LENGTH_SHORT).show()
+                    Log.i(TAG, "Fetched ${filteredFoods.size} items for user $currentUserId")
+                    // Calculate today's calorie total
+
+
+                } else {
+                    Toast.makeText(this@Progress, "Failed: ${response.message()}", Toast.LENGTH_SHORT).show()
+                    Log.e(TAG, "Failed: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<FoodsResponse>, t: Throwable) {
+                Toast.makeText(this@Progress, "Error: ${t.message}", Toast.LENGTH_LONG).show()
+                Log.e(TAG, "Error: ${t.message}")
+            }
+        })
+
+        return todayCalories
     }
 }
 /*

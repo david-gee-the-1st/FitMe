@@ -47,7 +47,7 @@ class AddIntake : AppCompatActivity() {
             insets
         }
 
-        sessionManager = SessionManager(this) //Make use of the sessionManager.getUserId() to get the userID
+        sessionManager = SessionManager(this)
         foodViewModel = ViewModelProvider(this)[FoodIntakeViewModel::class.java]
 
 

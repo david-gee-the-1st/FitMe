@@ -35,7 +35,7 @@ class Login : AppCompatActivity() {
     private lateinit var userDao: UserDao
     private lateinit var sessionManager: SessionManager
 
-    // Biometric Variables:
+    // Indently (2020) Biometric Variables:
     private var cancellationSignal: CancellationSignal? = null
     private val authenticationCallback: BiometricPrompt.AuthenticationCallback
         get() =
@@ -64,6 +64,7 @@ class Login : AppCompatActivity() {
         return cancellationSignal as CancellationSignal
     }
 
+    //Indently(2020) check for phone support
     private fun checkBiometricSupport(): Boolean{
         val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
 
@@ -112,7 +113,7 @@ class Login : AppCompatActivity() {
         observeViewModel()
         setupClickListeners()
 
-        //Biometrics Login
+        //Indently (2020) Biometrics Login
         checkBiometricSupport()
 
         binding.btnBiometricScan.setOnClickListener {
@@ -254,9 +255,6 @@ class Login : AppCompatActivity() {
         }
     }
 
-    /**
-     * Extension to simplify EditText text change handling
-     */
     fun android.widget.EditText.onTextChanged(listener: (String) -> Unit) {
         this.addTextChangedListener(object : android.text.TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -276,4 +274,5 @@ Reference list:
 The FULL Beginner Guide for Room in Android | Local Database Tutorial for Android. 2023. YouTube video, added by Philipp Lackner. [Online]. Available at: https://www.youtube.com/watch?v=bOd3wO0uFr8 [Accessed 22 September 2025].
 To Do List App using Recycler View Android Studio Kotlin Example Tutorial. 2022. YouTube video, added by Code With Cal. [Online]. Available at: https://www.youtube.com/watch?v=RfIR4oaSVfQ [Accessed 20 September 2025].
 Bottom Navigation Bar - Android Studio | Fragments | Kotlin | 2023. 2023. YouTube video, added by Foxandroid. [Online]. Available at: https://www.youtube.com/watch?v=L_6poZGNXOo [Accessed 20 September 2025].
+Biometric Authentication / Fingerprint Scanner (Android Studio Tutorial). 2020. YouTube video, added by Indently. [Online]. Available at: https://www.youtube.com/watch?v=tXHWyt8g5jc [Accessed 10 November 2025].
  */

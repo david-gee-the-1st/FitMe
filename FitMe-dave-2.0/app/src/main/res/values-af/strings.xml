@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- (PhilippLackner, 2021) -->
+<resources>
+    <!--
+    (PhilippLackner, 2021)
+    (OpenAI, 2025)
+    -->
+    <string name="app_name">FitMe</string>
+    <string name="hello_blank_fragment">Hallo leë fragment</string>
+
+    <!-- About Us -->
+    <string name="about_title">OOR ONS</string>
+    <string name="app_logo_description">FitMe Logo</string>
+    <string name="app_name_label">FitMe</string>
+    <string name="app_tagline">Jou Persoonlike Fiksheidsmaat</string>
+
+    <string name="about_description">
+        FitMe is \'n moderne fiksheidspoorsnyer-app wat ontwerp is om jou te help om jou gesondheidsdoelwitte vinniger te bereik.&#10;&#10;
+        Met \'n intuïtiewe koppelvlak en slim datatracking stel FitMe jou in staat om konsekwent te bly en jou vordering te monitor.&#10;&#10;
+        Ons missie is om fiksheid eenvoudig, toeganklik en lonend vir almal te maak.
+    </string>
+
+    <string name="version_label">Weergawe 1.0.0</string>
+    <string name="contact_info">Email: support@fitmeapp.com&#10;Website: www.fitmeapp.com</string>
+
+    <!-- Add Intake -->
+    <string name="calories_title">Kalorieë</string>
+    <string name="add_food_intake">Voeg Kosinname by</string>
+    <string name="hint_food_name">Kos/Drank Naam</string>
+    <string name="hint_calories">Kalorieë</string>
+    <string name="btn_save">Stoor</string>
+    <string name="search_label">Soek vir \'n Kos of Drank:</string>
+    <string name="search_hint">Voer Kos of Drank in</string>
+    <string name="btn_add_food">+</string>
+    <string name="search_results">Soekresultate</string>
+    <string name="total_searches">Totaal: 0</string>
+
+    <!-- Camera -->
+    <string name="camera_title">Kamera</string>
+    <string name="open_camera_button">Maak Kamera oop</string>
+
+    <!-- Home -->
+    <string name="home_title">Tuis</string>
+    <string name="exercises_title">OEFENINGE</string>
+    <string name="view_all">Sien alles</string>
+    <string name="legs">Bene</string>
+    <string name="arms">Arms</string>
+    <string name="chest">Bors</string>
+    <string name="back">Rug</string>
+    <string name="abs">Abs</string>
+    <string name="previous_images_title">VOORIGE BEELDE</string>
+
+    <!-- Login -->
+    <string name="title_login">MELD AAN</string>
+    <string name="hint_username">Gebruikersnaam</string>
+    <string name="hint_password">Wagwoord</string>
+    <string name="btn_continue">Gaan voort</string>
+    <string name="text_or">\u00A0\u00A0of\u00A0\u00A0</string>
+    <string name="btn_continue_google">Gaan voort met Google</string>
+    <string name="btn_register">Registreer?</string>
+    <string name="text_terms">Deur op voort te klik, stem jy in tot ons Gebruiksbepalings en Privaatheidsbeleid</string>
+
+    <!-- Password -->
+    <string name="change_password_title">VERANDER WAGWOORD</string>
+    <string name="current_password">Huidige Wagwoord</string>
+    <string name="new_password">Nuwe Wagwoord</string>
+    <string name="confirm_new_password">Bevestig Nuwe Wagwoord</string>
+    <string name="change_password_button">Verander Wagwoord</string>
+
+    <!-- Privacy -->
+    <string name="title_privacy_policy">PRIVAATHEIDSBELEID</string>
+    <string name="privacy_policy_text">
+        1. Inligtingversameling&#10;Ons versamel minimale gebruikersdata.&#10;&#10;
+        2. Gebruik van Data&#10;Geen data word gedeel sonder toestemming nie.&#10;&#10;
+        3. Sekuriteit&#10;Ons gebruik standaard sekuriteitspraktyke.&#10;&#10;
+        4. Kontak&#10;support@gmail.com
+    </string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profiel</string>
+    <string name="profile_overview_title">PROFIEL OORSIG</string>
+    <string name="daily_calorie_title">DAAGLIKSE KALORIE TEL</string>
+    <string name="images_title">BEELDE</string>
+    <string name="streak_label">AANEENLOPENDE DAE</string>
+    <string name="username_placeholder">Gebruikersnaam</string>
+    <string name="email_placeholder">gebruiker@email.com</string>
+
+    <!-- Profile Editor -->
+    <string name="edit_profile_title">WYSIG PROFIEL</string>
+    <string name="hint_email">E-pos</string>
+    <string name="hint_height">Lengte</string>
+    <string name="hint_weight">Gewig</string>
+    <string name="hint_phone">Telefoonnommer</string>
+    <string name="btn_save_changes">Stoor Veranderinge</string>
+
+    <!-- Progress -->
+    <string name="progress_report_title">VOORTGANGSRAPPORT</string>
+    <string name="overall_progress">Algehele Voortgang</string>
+    <string name="daily_calorie_count">Daaglikse Kalorie Tel</string>
+    <string name="todays_intake">Vandag se Inname</string>
+    <string name="add_intake">Voeg by +</string>
+    <string name="total_calories">Totaal: 916</string>
+
+    <!-- Register -->
+    <string name="register_title">REGISTREER</string>
+    <string name="username_hint">Gebruikersnaam</string>
+    <string name="email_hint">E-pos</string>
+    <string name="height_hint">Lengte</string>
+    <string name="weight_hint">Gewig</string>
+    <string name="dob_hint">Geboortedatum</string>
+    <string name="phone_hint">Telefoonnommer</string>
+    <string name="password_hint">Wagwoord</string>
+    <string name="register_button">Registreer</string>
+    <string name="login_button">Teken In</string>
+    <string name="already_have_account">Het reeds \'n rekening?</string>
+
+    <!-- Settings -->
+    <string name="settings_title">INSTELLINGS</string>
+    <string name="back_to_profile">Terug na profiel</string>
+    <string name="account_settings">Rekeninginstellings</string>
+    <string name="edit_profile">Wysig profiel</string>
+    <string name="change_password">Verander wagwoord</string>
+    <string name="push_notifications">Stootkennisgewings</string>
+    <string name="dark_mode">Donker modus</string>
+    <string name="more_settings">Meer</string>
+    <string name="about_us">Oor ons</string>
+    <string name="privacy_policy">Privaatheidsbeleid</string>
+    <string name="terms_conditions">Gebruiksbepalings</string>
+
+    <!-- Terms -->
+    <string name="terms_title">GEBRUIKSBEPALINGS</string>
+    <string name="terms_text">
+        1. Aanvaarding&#10;Gebruik van die app beteken instemming.&#10;&#10;
+        2. Gebruik&#10;Geen misbruik toegelaat nie.&#10;&#10;
+        3. Aanspreeklikheid&#10;Ons is nie aanspreeklik vir skade nie.&#10;&#10;
+        4. Veranderinge&#10;Kan enige tyd gewysig word.
+    </string>
+
+    <!-- Food -->
+    <string name="food_name">Kos Naam</string>
+    <string name="calories">Kalorieë</string>
+    <string name="food_calories_example">123 kcal</string>
+
+    <string name="legs_title">BENE</string>
+    <string name="arms_title">ARMS</string>
+    <string name="chest_title">BORS</string>
+    <string name="back_title">RUG</string>
+    <string name="abs_title">ABS</string>
+
+    <string name="workout">
+        INSTRUKSIES:&#10;&#10;
+        MAKLIK   : &#10;10 herhalings van elke oefening. &#10;30 sek - 2 min rus na elke stel.&#10;&#10;
+        GEMIDDELD : &#10;20 herhalings van elke oefening. &#10;30 sek - 2 min rus na elke stel.&#10;&#10;
+        MOEILIK   : &#10;50 herhalings van elke oefening. &#10;30 sek - 2 min rus na elke stel.&#10;
+    </string>
+</resources>
+    <!--
+    PhilippLackner. 2021. How to Translate Your Android App to Any Language (SO EASY!) - Android Studio Tutorial.
+    [Video Online]. Available at:
+    https://www.youtube.com/watch?v=LXbpsBtIIeM
+    [Accessed: 15 November 2025]
+
+    OpenAI. 2025. Chat-GPT(GPT-5.1).
+    [Large language model]. Available at:
+    https://chatgpt.com/share/691cb195-327c-800f-bd23-e0444fd2f4cf
+    [Accessed: 16 November 2025]
+    -->

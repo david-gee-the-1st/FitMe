@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    (PhilippLackner, 2021)
+    (OpenAI, 2025)
+    -->
+    <string name="app_name">FitMe</string>
+    <string name="hello_blank_fragment">Sawubona, i-fragment engenalutho</string>
+
+    <!-- About Us -->
+    <string name="about_title">MAYELANA NATHI</string>
+    <string name="app_logo_description">I-Logo ye-FitMe</string>
+    <string name="app_name_label">FitMe</string>
+    <string name="app_tagline">Umngane Wakho Wokuzivocavoca Siqu</string>
+
+    <string name="about_description">
+        I-FitMe iyithuluzi lesimanje lokulandelela ukuzivocavoca elakhelwe ukukusiza ufinyelele izinhloso zakho.&#10;&#10;
+        Ngesixhumi esibonakalayo esilula, i-FitMe ikuvumela ukuthi ulandele intuthuko yakho futhi uhlale ugqugquzelwa.&#10;&#10;
+        Inhloso yethu ukwenza ukuzivocavoca kube lula futhi kufinyeleleke.
+    </string>
+
+    <string name="version_label">Inguqulo 1.0.0</string>
+    <string name="contact_info">Email: support@fitmeapp.com&#10;Website: www.fitmeapp.com</string>
+
+    <!-- Intake -->
+    <string name="calories_title">Amakalori</string>
+    <string name="add_food_intake">Engeza Ukudla</string>
+    <string name="hint_food_name">Igama Lokudla/Isiphuzo</string>
+    <string name="hint_calories">Amakalori</string>
+    <string name="btn_save">Londoloza</string>
+    <string name="search_label">Sesha ukudla noma isiphuzo:</string>
+    <string name="search_hint">Faka ukudla noma isiphuzo</string>
+    <string name="btn_add_food">+</string>
+    <string name="search_results">Imiphumela Yosesho</string>
+    <string name="total_searches">Inani Eliphelele: 0</string>
+
+    <!-- Camera -->
+    <string name="camera_title">Ikhamera</string>
+    <string name="open_camera_button">Vula Ikhamera</string>
+
+    <!-- Home -->
+    <string name="home_title">Ikhaya</string>
+    <string name="exercises_title">UKUZIVOCAVOCA</string>
+    <string name="view_all">Buka Konke</string>
+    <string name="legs">Imilenze</string>
+    <string name="arms">Izingalo</string>
+    <string name="chest">Isifuba</string>
+    <string name="back">Emuva</string>
+    <string name="abs">Ama-Abs</string>
+    <string name="previous_images_title">IZITHOMBE EZEDLULE</string>
+
+    <!-- Login -->
+    <string name="title_login">NGENA</string>
+    <string name="hint_username">Igama lomsebenzisi</string>
+    <string name="hint_password">Iphasiwedi</string>
+    <string name="btn_continue">Qhubeka</string>
+    <string name="text_or">\u00A0\u00A0noma\u00A0\u00A0</string>
+    <string name="btn_continue_google">Qhubeka nge-Google</string>
+    <string name="btn_register">Bhalisela?</string>
+    <string name="text_terms">Uyavuma Imigomo Nemibandela kanye Nobumfihlo</string>
+
+    <!-- Password -->
+    <string name="change_password_title">SHINTSHA IPHASIWEDI</string>
+    <string name="current_password">Iphasiwedi Yamanje</string>
+    <string name="new_password">Iphasiwedi Entsha</string>
+    <string name="confirm_new_password">Qinisekisa Iphasiwedi Entsha</string>
+    <string name="change_password_button">Shintsha</string>
+
+    <!-- Privacy -->
+    <string name="title_privacy_policy">INQUBO YOBUMFIHLO</string>
+    <string name="privacy_policy_text">
+        1. Ukuqoqwa Kolwazi — sidonsa idatha encane.&#10;&#10;
+        2. Ukusetshenziswa — aludluliselwa ngaphandle kwemvume.&#10;&#10;
+        3. Ukuvikeleka — izindlela ezijwayelekile ziyasetshenziswa.&#10;&#10;
+        4. Xhumana — support@gmail.com
+    </string>
+
+    <!-- Profile -->
+    <string name="profile_title">Iphrofayela</string>
+    <string name="profile_overview_title">UKUBUKA IPHROFAYELA</string>
+    <string name="daily_calorie_title">UKUBALA AMAKALORI</string>
+    <string name="images_title">IZITHOMBE</string>
+    <string name="streak_label">UMUGQA</string>
+    <string name="username_placeholder">Igama lomsebenzisi</string>
+    <string name="email_placeholder">umsebenzisi@email.com</string>
+
+    <!-- Edit -->
+    <string name="edit_profile_title">HLELA IPHROFAYELA</string>
+    <string name="hint_email">I-imeyili</string>
+    <string name="hint_height">Ubude</string>
+    <string name="hint_weight">Isisindo</string>
+    <string name="hint_phone">Inombolo Yocingo</string>
+    <string name="btn_save_changes">Londoloza Izinguquko</string>
+
+    <!-- Progress -->
+    <string name="progress_report_title">UMBIKO WOKUTHUTHUKA</string>
+    <string name="overall_progress">Inqubekela Phambili Yonke</string>
+    <string name="daily_calorie_count">Ukubala Amakalori</string>
+    <string name="todays_intake">Ukudla Kwanamhlanje</string>
+    <string name="add_intake">Engeza +</string>
+    <string name="total_calories">Sekuphelele: 916</string>
+
+    <!-- Register -->
+    <string name="register_title">BHALISA</string>
+    <string name="username_hint">Igama lomsebenzisi</string>
+    <string name="email_hint">I-imeyili</string>
+    <string name="height_hint">Ubude</string>
+    <string name="weight_hint">Isisindo</string>
+    <string name="dob_hint">Usuku Lokuzalwa</string>
+    <string name="phone_hint">Inombolo Yocingo</string>
+    <string name="password_hint">Iphasiwedi</string>
+    <string name="register_button">Bhalisa</string>
+    <string name="login_button">Ngena</string>
+    <string name="already_have_account">Unayo i-akhawunti?</string>
+
+    <!-- Settings -->
+    <string name="settings_title">IZILUNGISELELO</string>
+    <string name="back_to_profile">Buyela Ephrofayeleni</string>
+    <string name="account_settings">Izilungiselelo Ze-akhawunti</string>
+    <string name="edit_profile">Hlela Iphrofayela</string>
+    <string name="change_password">Shintsha Iphasiwedi</string>
+    <string name="push_notifications">Izaziso</string>
+    <string name="dark_mode">Imodi Emnyama</string>
+    <string name="more_settings">Okuningi</string>
+    <string name="about_us">Mayelana Nathi</string>
+    <string name="privacy_policy">Inqubomgomo Yobumfihlo</string>
+    <string name="terms_conditions">Imigomo Nemibandela</string>
+
+    <!-- Terms -->
+    <string name="terms_title">IMIGOMO NEMIBANDELA</string>
+    <string name="terms_text">
+        1. Ukwamukelwa&#10;Uyavuma imigomo.&#10;&#10;
+        2. Ukusetshenziswa&#10;Akukho ukusetshenziswa okungekho emthethweni.&#10;&#10;
+        3. Ukuphendula&#10;Asiphenduli ngomonakalo.&#10;&#10;
+        4. Izinguquko&#10;Kungaguqulwa noma kunini.
+    </string>
+
+    <!-- Food -->
+    <string name="food_name">Igama Lokudla</string>
+    <string name="calories">Amakalori</string>
+    <string name="food_calories_example">123 kcal</string>
+
+    <string name="legs_title">IMILENZA</string>
+    <string name="arms_title">IZINGALO</string>
+    <string name="chest_title">ISIFUBA</string>
+    <string name="back_title">EMUVA</string>
+    <string name="abs_title">AMA-ABS</string>
+
+    <string name="workout">
+        IMIYALO:&#10;&#10;
+        KULULA   : &#10;10 ukuphindaphinda kwesenzo ngasinye. &#10;30 sec - 2 min ukuphumula ngemuva kwesethi ngayinye.&#10;&#10;
+        OKUMaphakathi : &#10;20 ukuphindaphinda kwesenzo ngasinye. &#10;30 sec - 2 min ukuphumula ngemuva kwesethi ngayinye.&#10;&#10;
+        KUNZIMA   : &#10;50 ukuphindaphinda kwesenzo ngasinye. &#10;30 sec - 2 min ukuphumula ngemuva kwesethi ngayinye.&#10;
+    </string>
+</resources>
+    <!--
+    PhilippLackner. 2021. How to Translate Your Android App to Any Language (SO EASY!) - Android Studio Tutorial.
+    [Video Online]. Available at:
+    https://www.youtube.com/watch?v=LXbpsBtIIeM
+    [Accessed: 15 November 2025]
+
+    OpenAI. 2025. Chat-GPT(GPT-5.1).
+    [Large language model]. Available at:
+    https://chatgpt.com/share/691cb195-327c-800f-bd23-e0444fd2f4cf
+    [Accessed: 16 November 2025]
+    -->

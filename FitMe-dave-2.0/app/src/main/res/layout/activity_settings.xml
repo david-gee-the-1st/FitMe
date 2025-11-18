@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_red"
+    tools:context=".Settings">
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBackProfile"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_profile"
+        android:textStyle="bold"
+        app:backgroundTint="@android:color/transparent" />
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settingsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_red"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/settings_title"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_settings_w"/>
+
+    <!-- Content -->
+    <ScrollView
+        android:background="@color/main_background_red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Account Settings -->
+            <TextView
+                android:textColor="@color/black"
+                android:text="@string/account_settings"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:background="@color/background_red"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <!-- Edit Profile -->
+                    <com.google.android.material.button.MaterialButton
+                        android:textColor="@color/white"
+                        android:id="@+id/btnEditProfile"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_profile"
+                        android:textAlignment="textStart"
+                        app:icon="@drawable/ic_arrow_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/white" />
+
+                    <!-- Change Password -->
+                    <com.google.android.material.button.MaterialButton
+                        android:textColor="@color/white"
+                        android:id="@+id/btnChangePassword"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/change_password"
+                        android:textAlignment="textStart"
+                        app:icon="@drawable/ic_arrow_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/white" />
+
+                    <!-- Push Notifications -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:text="@string/push_notifications"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14sp" />
+
+                        <Switch
+                            android:id="@+id/switchNotifications"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+
+                    <!-- Dark Mode -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/dark_mode"
+                            android:textSize="14sp" />
+
+                        <Switch
+                            android:id="@+id/switchDarkMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Other Settings -->
+            <TextView
+                android:textColor="@color/black"
+                android:text="@string/more_settings"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:background="@color/background_red"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <!-- About Us -->
+                    <com.google.android.material.button.MaterialButton
+                        android:textColor="@color/white"
+                        android:id="@+id/btnAboutUs"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us"
+                        android:textAlignment="textStart"
+                        app:icon="@drawable/ic_arrow_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/white" />
+
+                    <!-- Privacy Policy -->
+                    <com.google.android.material.button.MaterialButton
+                        android:textColor="@color/white"
+                        android:id="@+id/btnPrivacyPolicy"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_policy"
+                        android:textAlignment="textStart"
+                        app:icon="@drawable/ic_arrow_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/white" />
+
+                    <!-- Terms -->
+                    <com.google.android.material.button.MaterialButton
+                        android:textColor="@color/white"
+                        android:id="@+id/btnTerms"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/terms_conditions"
+                        android:textAlignment="textStart"
+                        app:icon="@drawable/ic_arrow_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

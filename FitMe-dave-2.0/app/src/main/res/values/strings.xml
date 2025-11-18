@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">FitMe</string>
+    <!-- (PhilippLackner, 2021) -->
+    <!--
+    Auth0 identifiers and settings
+    ==============================
+    -->
+
+    <!-- Identifiers -->
+    <string name="com_auth0_scheme">app</string>
+
+    <!-- Settings -->
+    <string name="login_scopes">openid profile email read:current_user update:current_user_metadata</string>
+    <string name="login_audience">https://%1$s/api/v2/</string>
+
+
+    <!--
+    Main activity
+    =============
+    -->
+
+    <!-- Title -->
+    <string name="initial_title">Welcome to the app!</string>
+    <string name="logged_in_title">You are logged in.</string>
+    <string name="logged_out_title">You are logged out.</string>
+
+    <!-- "Log in" and "Log out" buttons -->
+    <string name="button_login">Log in</string>
+    <string name="button_logout">Log out</string>
+
+    <!-- User profile -->
+    <string name="user_profile">
+        Name: %1$s\n
+        Email: %2$s
+    </string>
+
+    <!-- "Get" and "Set" buttons -->
+    <string name="button_get">Get</string>
+    <string name="button_set">Set</string>
+
+    <!-- SnackBar messages-->
+    <string name="login_success_message">Successfully logged in! %1$s</string>
+    <string name="login_failure_message">Failed to log in. %1$s</string>
+    <string name="general_failure_with_exception_code">Failed - exception code: %1$s</string>
+    <string name="general_success_message">Success!</string>
+
+    <!-- About Us Activity -->
+    <string name="about_title">ABOUT US</string>
+    <string name="app_logo_description">FitMe Logo</string>
+    <string name="app_name_label">FitMe</string>
+    <string name="app_tagline">Your Personal Fitness Companion</string>
+
+    <string name="about_description">
+        FitMe is a modern fitness tracking app designed to help you reach your health goals faster.&#10;&#10;
+        With an intuitive interface and smart data tracking, FitMe empowers you to stay consistent, track your performance, and become the best version of yourself.&#10;&#10;
+        Our mission is to make fitness simple, accessible, and rewarding for everyone.
+    </string>
+
+    <string name="version_label">Version 1.0.0</string>
+    <string name="contact_info">Email: support@fitmeapp.com&#10;Website: www.fitmeapp.com</string>
+
+    <!-- Add Intake Activity -->
+    <string name="calories_title">Calories</string>
+    <string name="add_food_intake">Add Food Intake</string>
+    <string name="hint_food_name">Food/Drink Name</string>
+    <string name="hint_calories">Calories</string>
+    <string name="btn_save">Save</string>
+    <string name="search_label">Search for a Food or Drink:</string>
+    <string name="search_hint">Enter Food or Drink</string>
+    <string name="btn_add_food">+</string>
+    <string name="search_results">Search Results</string>
+    <string name="total_searches">Total: 0</string>
+
+    <!-- Camera Activity -->
+    <string name="camera_title">Camera</string>
+    <string name="open_camera_button">Open Camera</string>
+
+    <!-- Home Activity -->
+    <string name="home_title">Home</string>
+    <string name="exercises_title">EXERCISES</string>
+    <string name="view_all">View all</string>
+    <string name="legs">Legs</string>
+    <string name="arms">Arms</string>
+    <string name="chest">Chest</string>
+    <string name="back">Back</string>
+    <string name="abs">Abs</string>
+    <string name="previous_images_title">PREVIOUS IMAGES</string>
+
+    <!-- Login Activity -->
+    <string name="title_login">LOG IN</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_continue">Continue</string>
+    <string name="text_or">\u00A0\u00A0or\u00A0\u00A0</string>
+    <string name="btn_continue_google">Continue with Google</string>
+    <string name="btn_register">Register?</string>
+    <string name="text_terms">By clicking continue, you agree to our Terms of Service and Privacy Policy</string>
+
+    <!-- Change Password Activity -->
+    <string name="change_password_title">CHANGE PASSWORD</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="change_password_button">Change Password</string>
+
+    <!-- Privacy Policy Activity -->
+    <string name="title_privacy_policy">PRIVACY POLICY</string>
+    <string name="privacy_policy_text">
+        PRIVACY POLICY&#10;&#10;
+        1. Information Collection&#10;We collect minimal user data to improve service.&#10;&#10;
+        2. Data Usage&#10;Your information will not be shared with third parties without consent.&#10;&#10;
+        3. Security&#10;We use standard security practices to protect user data.&#10;&#10;
+        4. Contact&#10;For any questions, contact support@gmail.com
+    </string>
+
+    <!-- Profile Activity -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_overview_title">PROFILE OVERVIEW</string>
+    <string name="daily_calorie_title">DAILY CALORIE COUNT</string>
+    <string name="images_title">IMAGES</string>
+    <string name="streak_label">STREAK</string>
+    <string name="username_placeholder">Username</string>
+    <string name="email_placeholder">user@email.com</string>
+
+    <!-- Profile Editor Activity -->
+    <string name="edit_profile_title">EDIT PROFILE</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_height">Height</string>
+    <string name="hint_weight">Weight</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="btn_save_changes">Save Changes</string>
+
+    <!-- Progress Activity -->
+    <string name="progress_report_title">PROGRESS REPORT</string>
+    <string name="overall_progress">Overall Progress</string>
+    <string name="daily_calorie_count">Daily Calorie Count</string>
+    <string name="todays_intake">Today\'s Intake</string>
+    <string name="add_intake">Add +</string>
+    <string name="total_calories">Total: 916</string>
+
+    <!-- Register Activity -->
+    <string name="register_title">REGISTER</string>
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="height_hint">Height</string>
+    <string name="weight_hint">Weight</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="password_hint">Password</string>
+    <string name="register_button">Register</string>
+    <string name="login_button">Login</string>
+    <string name="already_have_account">Already have an account?</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">SETTINGS</string>
+    <string name="back_to_profile">Back to profile</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="change_password">Change password</string>
+    <string name="push_notifications">Push notifications</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="more_settings">More</string>
+    <string name="about_us">About us</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="terms_conditions">Terms and conditions</string>
+
+    <!-- Terms & Conditions Activity -->
+    <string name="terms_title">TERMS &amp; CONDITIONS</string>
+    <string name="terms_text">
+        TERMS &amp; CONDITIONS&#10;&#10;
+        1. Acceptance of Terms&#10;By using this app, you agree to these terms.&#10;&#10;
+        2. Usage&#10;You agree not to misuse the app or engage in prohibited activities.&#10;&#10;
+        3. Liability&#10;We are not liable for damages resulting from use of this app.&#10;&#10;
+        4. Changes&#10;We may update these Terms at any time without prior notice.
+    </string>
+
+    <!-- Food Item -->
+    <string name="food_name">Food Name</string>
+    <string name="calories">Calories</string>
+    <string name="food_calories_example">123 kcal</string>
+
+    <string name="legs_title">LEGS</string>
+    <string name="arms_title">ARMS</string>
+    <string name="chest_title">CHEST</string>
+    <string name="back_title">BACK</string>
+    <string name="abs_title">ABS</string>
+
+    <string name="workout">
+        INSTRUCTIONS:&#10;&#10;
+        EASY   : &#10;10 Reps of each workout. &#10;30sec - 2min rest after each set.&#10;&#10;
+        MEDIUM : &#10;20 Reps of each workout. &#10;30sec - 2min rest after each set.&#10;&#10;
+        HARD   : &#10;50 Reps of each workout. &#10;30sec - 2min rest after each set.&#10;
+    </string>
+</resources>
+    <!--
+        PhilippLackner. 2021. How to Translate Your Android App to Any Language (SO EASY!) - Android Studio Tutorial.
+        [Video Online]. Available at:
+        https://www.youtube.com/watch?v=LXbpsBtIIeM
+        [Accessed: 15 November 2025]
+    -->

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    tools:context=".Home"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settingsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_red"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/home_title"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_home_w" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- EXERCISES SECTION -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_background_red"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Section Title -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exercises_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvExercisesViewAll"
+                        android:layout_width="67dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_streak_frame"
+                        android:backgroundTint="@color/black"
+                        android:text="@string/view_all"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Row of 5 exercise buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <!-- Legs -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnLegs"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/bg_exe_frame"
+                            android:backgroundTint="@color/black"
+                            android:contentDescription="@string/legs"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/leg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/legs"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Arms -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnArms"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/bg_exe_frame"
+                            android:backgroundTint="@color/black"
+                            android:contentDescription="@string/arms"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/arm" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/arms"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Chest -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnChest"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/bg_exe_frame"
+                            android:backgroundTint="@color/black"
+                            android:contentDescription="@string/chest"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/chest" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/chest"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Back -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnBack"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/bg_exe_frame"
+                            android:backgroundTint="@color/black"
+                            android:contentDescription="@string/back"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/back"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Abs -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnAbs"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/bg_exe_frame"
+                            android:backgroundTint="@color/black"
+                            android:contentDescription="@string/abs"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/abs" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/abs"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- PREVIOUS IMAGES SECTION -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_red"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/previous_images_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tvImagesViewAll"
+                            android:layout_width="66dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_streak_frame"
+                            android:text="@string/view_all"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="449dp"
+                        android:layout_marginTop="12dp"
+                        android:clipToPadding="false"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/bottom_nav_menu" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

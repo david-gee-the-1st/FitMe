@@ -141,4 +141,11 @@
     <string name="chest_title">BORS</string>
     <string name="back_title">RUG</string>
     <string name="abs_title">ABS</string>
+
+    <string name="workout">
+        INSTRUKSIES:&#10;&#10;
+        MAKLIK   : &#10;10 herhalings van elke oefening. &#10;30 sek - 2 min rus na elke stel.&#10;&#10;
+        GEMIDDELD : &#10;20 herhalings van elke oefening. &#10;30 sek - 2 min rus na elke stel.&#10;&#10;
+        MOEILIK   : &#10;50 herhalings van elke oefening. &#10;30 sek - 2 min rus na elke stel.&#10;
+    </string>
 </resources>

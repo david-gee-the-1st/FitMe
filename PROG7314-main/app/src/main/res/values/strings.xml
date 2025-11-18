@@ -143,4 +143,11 @@
     <string name="chest_title">CHEST</string>
     <string name="back_title">BACK</string>
     <string name="abs_title">ABS</string>
+
+    <string name="workout">
+        INSTRUCTIONS:&#10;&#10;
+        EASY   : &#10;10 Reps of each workout. &#10;30sec - 2min rest after each set.&#10;&#10;
+        MEDIUM : &#10;20 Reps of each workout. &#10;30sec - 2min rest after each set.&#10;&#10;
+        HARD   : &#10;50 Reps of each workout. &#10;30sec - 2min rest after each set.&#10;
+    </string>
 </resources>

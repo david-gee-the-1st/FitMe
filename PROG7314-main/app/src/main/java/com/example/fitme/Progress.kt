@@ -187,7 +187,7 @@ class Progress : AppCompatActivity() {
     private fun fetchFoodsFromApi(): Double  {
         Toast.makeText(this, "Fetching foods...", Toast.LENGTH_SHORT).show()
 
-        var todayCalories: Double = 0
+        var todayCalories: Double = 0.0
 
         val call = ApiClient.authApi.getAllFoods()
         call.enqueue(object : Callback<FoodsResponse> {

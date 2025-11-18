@@ -22,7 +22,7 @@ class FoodAdapter(private var foodList: MutableList<AuthResponse>) :
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val food = foodList[position]
-        //holder.tvFoodName.text = food.foodName
+        holder.tvFoodName.text = food.name
         holder.tvCalories.text = "${food.calories} kcal"
     }
 

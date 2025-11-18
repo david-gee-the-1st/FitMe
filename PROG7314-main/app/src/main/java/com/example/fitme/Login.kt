@@ -1,10 +1,17 @@
 package com.example.fitme
 
+import android.app.Activity
+import android.app.KeyguardManager
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.os.CancellationSignal
 import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +21,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricPrompt
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.getSystemService
+import androidx.fragment.app.FragmentActivity
 
 class Login : AppCompatActivity() {
 
@@ -21,6 +34,57 @@ class Login : AppCompatActivity() {
     private lateinit var database: FitMeDatabase
     private lateinit var userDao: UserDao
     private lateinit var sessionManager: SessionManager
+
+    // Biometric Variables:
+    private var cancellationSignal: CancellationSignal? = null
+    private val authenticationCallback: BiometricPrompt.AuthenticationCallback
+        get() =
+            @RequiresApi(Build.VERSION_CODES.P)
+            object : BiometricPrompt.AuthenticationCallback(){
+                override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
+                    super.onAuthenticationError(errorCode, errString)
+                    Toast.makeText(applicationContext, "The following error occurred: $errString", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                    super.onAuthenticationSucceeded(result)
+                    Toast.makeText(applicationContext, "Successful Login!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@Login, Home::class.java)
+                    startActivity(intent)
+                }
+
+        }
+
+    private fun getCancellationSignal(): CancellationSignal{
+        cancellationSignal = CancellationSignal()
+        cancellationSignal?.setOnCancelListener {
+            Toast.makeText(applicationContext, "Authentication was cancelled by user", Toast.LENGTH_SHORT).show()
+        }
+
+        return cancellationSignal as CancellationSignal
+    }
+
+    private fun checkBiometricSupport(): Boolean{
+        val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+
+        if (!keyguardManager.isKeyguardSecure){
+            Toast.makeText(applicationContext, "Please enable fingerprint authentication", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if  (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.USE_BIOMETRIC) != PackageManager.PERMISSION_GRANTED){
+            Toast.makeText(applicationContext, "Fingerprint permission is not enabled", Toast.LENGTH_SHORT).show()
+            return false
+        }
+        if (packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+            return true
+        }
+        else {
+            return true
+        }
+    }
+
+
 
     // ViewModel initialization
     private val viewModel: LoginViewModel by lazy {
@@ -32,6 +96,7 @@ class Login : AppCompatActivity() {
         ViewModelProvider(this, factory)[LoginViewModel::class.java]
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -45,6 +110,24 @@ class Login : AppCompatActivity() {
 
         setupEventListeners()
         observeViewModel()
+        setupClickListeners()
+
+        //Biometrics Login
+        checkBiometricSupport()
+
+        binding.btnBiometricScan.setOnClickListener {
+            val executor = ContextCompat.getMainExecutor(this)
+            val biometricPrompt = BiometricPrompt(this, executor, authenticationCallback)
+            val promptInfo = BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Biometric login for FitMe")
+                .setSubtitle("Log in using your biometric credential")
+                .setNegativeButtonText("Cancel")
+                .build()
+
+            biometricPrompt.authenticate(promptInfo)
+
+        }
+
     }
 
     private fun setupEventListeners() {
@@ -57,16 +140,57 @@ class Login : AppCompatActivity() {
             viewModel.onEvent(LoginEvent.checkPassword(it))
         }
 
-        // Login button
-        binding.btnLogin.setOnClickListener {
-            sessionManager.clearSession()
-            viewModel.onEvent(LoginEvent.Login)
-        }
-
         // Navigate to Register Activity
         binding.btnRegisterNav.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
+        }
+    }
+
+    private fun setupClickListeners() {
+        // Login button
+        binding.btnLogin.setOnClickListener {
+            var uid : String = ""
+
+            if (binding.etPassword.text.isNullOrEmpty()){
+                Toast.makeText(this@Login, "Please input username/email", Toast.LENGTH_SHORT).show()
+            }
+            else if(binding.etUsername.text.isNullOrEmpty()){
+                Toast.makeText(this@Login, "Please input password", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val email = binding.etUsername.text.toString()
+                val password = binding.etPassword.text.toString()
+                val intent = Intent(this@Login, Home::class.java)
+
+                lifecycleScope.launch {
+                    //Online login:
+                    val user = viewModel.login(email, password)
+
+                    if (user != null) {
+                        Toast.makeText(this@Login, "Login Successful", Toast.LENGTH_LONG).show()
+
+                        //Toast.makeText(this@Login, user.email, Toast.LENGTH_LONG).show()
+
+                        sessionManager.clearSession()
+
+                        sessionManager.saveUserSession(
+                            user.userId,
+                            user.email,
+                            user.username
+                        )
+
+                        startActivity(Intent(this@Login, Home::class.java))
+                        finish()
+
+                    } else {
+                        Toast.makeText(this@Login, "Login Failed", Toast.LENGTH_LONG).show()
+                        //Offline login:
+                        sessionManager.clearSession()
+                        viewModel.onEvent(LoginEvent.Login)
+                    }
+                }
+            }
         }
     }
 
@@ -143,6 +267,9 @@ class Login : AppCompatActivity() {
         })
     }
 }
+
+//Biometric scanner:
+
 
 /*
 Reference list:

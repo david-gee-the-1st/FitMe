@@ -170,39 +170,6 @@ class AddIntake : AppCompatActivity() {
             }
         })
     }
-    /*
-        private fun getFoodsFromApi() {
-            ApiClient.authApi.getAllFoods().enqueue(object : Callback<FoodsResponse> {
-                override fun onResponse(call: Call<FoodsResponse>, response: Response<FoodsResponse>) {
-                    if (response.isSuccessful && response.body() != null) {
-                        val foodsResponse = response.body()!!
-                        foodList.clear()
-                        foodList.addAll(foodsResponse.data)
-
-                        Toast.makeText(
-                            this@Intake,
-                            "Fetched ${foodList.size} food items successfully!",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    } else {
-                        Toast.makeText(
-                            this@Intake,
-                            "Failed to fetch foods: ${response.message()}",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                }
-
-                override fun onFailure(call: Call<FoodsResponse>, t: Throwable) {
-                    Toast.makeText(
-                        this@Intake,
-                        "Network error: ${t.message}",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            })
-        }
-     */
 }
 
 /*

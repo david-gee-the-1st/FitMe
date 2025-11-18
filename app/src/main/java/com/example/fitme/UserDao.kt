@@ -23,6 +23,14 @@ interface UserDao {
     @Query("SELECT * FROM users WHERE email = :email")
     suspend fun getUserByEmail(email: String): User?
 
+    //Calorie counters
+    @Query("UPDATE users SET caloriesToday = :newAmount WHERE userId = :userId")
+    suspend fun updateCaloriesToday(userId: String, newAmount: Int)
+
+    @Query("UPDATE users SET calorieLimit = :newLimit WHERE userId = :userId")
+    suspend fun updateCalorieLimit(userId: String, newLimit: Int)
+
+
 }
 /*
 Reference list:

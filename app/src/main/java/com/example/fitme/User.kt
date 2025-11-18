@@ -14,7 +14,11 @@ data class User(
     val weight : Double,
     val dob : String,
     val phone : String,
-    val password : String
+    val password : String,
+
+    //Dynamic Calorie counter
+    val calorieLimit: Int = 2000,        // default limit
+    val caloriesToday: Int = 0           // will reset daily in future
 )
 
 /*

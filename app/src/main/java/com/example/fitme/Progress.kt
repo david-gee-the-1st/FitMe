@@ -3,8 +3,6 @@ package com.example.fitme
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,13 +17,19 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.time.LocalDate
 
 class Progress : AppCompatActivity() {
 
     private lateinit var binding: ActivityProgressBinding
     private lateinit var foodIntakeDao: FoodIntakeDao
+    private lateinit var userDao: UserDao
+    private lateinit var sessionManager: SessionManager
 
+    // ViewModel
     private val viewModel: ProgressViewModel by lazy {
         val factory = object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -41,47 +45,91 @@ class Progress : AppCompatActivity() {
         binding = ActivityProgressBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Apply system bar insets for edge-to-edge
+        // Apply system bar insets
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Initialize DB
-        foodIntakeDao = FitMeDatabase.getDatabase(this).foodIntakeDao()
+        // Initialize DB + DAOs
+        val database = FitMeDatabase.getDatabase(this)
+        foodIntakeDao = database.foodIntakeDao()
+        userDao = database.userDao()
+        sessionManager = SessionManager(this)
 
-        // Observe and load data
+        // Observe view model state
         observeViewModel()
+
+        // Load progress data
         viewModel.onEvent(ProgressEvent.LoadProgressData)
 
-        // Handle add intake button
+        // Add intake button → AddIntake screen
         binding.btnAddIntake.setOnClickListener {
-            val intent = Intent(this, AddIntake::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, AddIntake::class.java))
         }
 
+        // Bottom Navigation
         setupBottomNavigation()
     }
 
     private fun observeViewModel() {
+
         lifecycleScope.launch {
             viewModel.state.collect { state ->
-                binding.tvCaloriesValue.text = "${state.totalCalories} Cals"
-                binding.progressCalories.progress = state.totalCalories
-                binding.tvTotalCalories.text = "Total: ${state.totalCalories}"
 
-                // Display list
+                // Daily calories
+                val total = state.totalCalories
+                binding.tvCaloriesValue.text = "$total Cals"
+
+                // Set progress bar dynamically
+                loadUserCalorieLimit { limit ->
+
+                    binding.progressCalories.max = limit
+                    binding.progressCalories.progress = total
+                }
+
+                // List of today's foods
                 displayFoodList(state.todayIntake)
 
-                // Draw line chart
+                // Weekly chart
                 drawLineChart(state.days, state.weeklyCalories)
 
-                // Show error (if any)
+                // Error message
                 state.errorMessage?.let {
                     Toast.makeText(this@Progress, it, Toast.LENGTH_SHORT).show()
                 }
+
+                // Sync to User DB for Profile page summary
+                syncCaloriesToUser(total)
             }
+        }
+    }
+
+    // Sync daily total calories to "caloriesToday" in User table
+    private fun syncCaloriesToUser(total: Int) {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val userId = sessionManager.getUserId()
+            if (!userId.isNullOrBlank()) {
+                val user = userDao.getUserById(userId)
+                if (user != null) {
+                    val updated = user.copy(caloriesToday = total)
+                    userDao.upsertUser(updated)
+                }
+            }
+        }
+    }
+
+    // Load user calorie limit to set progress bar max value
+    private fun loadUserCalorieLimit(callback: (limit: Int) -> Unit) {
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            val userId = sessionManager.getUserId()
+            val user = if (!userId.isNullOrBlank()) userDao.getUserById(userId) else null
+
+            val limit = user?.calorieLimit ?: 2000   // fallback to 2000
+
+            withContext(Dispatchers.Main) { callback(limit) }
         }
     }
 
@@ -89,9 +137,10 @@ class Progress : AppCompatActivity() {
         binding.foodListRecyclerView.adapter = FoodIntakeAdapter(foodList)
     }
 
-
     private fun drawLineChart(days: List<String>, calories: List<Int>) {
+
         val lineChart: LineChart = binding.lineChart
+
         val entries = calories.mapIndexed { index, value ->
             Entry(index.toFloat(), value.toFloat())
         }
@@ -119,6 +168,7 @@ class Progress : AppCompatActivity() {
         lineChart.axisRight.isEnabled = false
         lineChart.description.isEnabled = false
         lineChart.legend.isEnabled = false
+
         lineChart.invalidate()
     }
 
@@ -128,28 +178,35 @@ class Progress : AppCompatActivity() {
 
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
+
                 R.id.nav_home -> {
                     startActivity(Intent(this, Home::class.java))
                     true
                 }
+
                 R.id.nav_progress -> true
+
                 R.id.nav_camera -> {
-                    startActivity(Intent(this, AddIntake::class.java))
+                    startActivity(Intent(this, Camera::class.java))
                     true
                 }
+
                 R.id.nav_search -> {
                     startActivity(Intent(this, AddIntake::class.java))
                     true
                 }
+
                 R.id.nav_profile -> {
                     startActivity(Intent(this, Profile::class.java))
                     true
                 }
+
                 else -> false
             }
         }
     }
 }
+
 /*
 Reference list:
 The FULL Beginner Guide for Room in Android | Local Database Tutorial for Android. 2023. YouTube video, added by Philipp Lackner. [Online]. Available at: https://www.youtube.com/watch?v=bOd3wO0uFr8 [Accessed 22 September 2025].

@@ -110,6 +110,7 @@ class Login : AppCompatActivity() {
 
         setupEventListeners()
         observeViewModel()
+        setupClickListeners()
 
         //Biometrics Login
         checkBiometricSupport()
@@ -139,16 +140,57 @@ class Login : AppCompatActivity() {
             viewModel.onEvent(LoginEvent.checkPassword(it))
         }
 
-        // Login button
-        binding.btnLogin.setOnClickListener {
-            sessionManager.clearSession()
-            viewModel.onEvent(LoginEvent.Login)
-        }
-
         // Navigate to Register Activity
         binding.btnRegisterNav.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
+        }
+    }
+
+    private fun setupClickListeners() {
+        // Login button
+        binding.btnLogin.setOnClickListener {
+            var uid : String = ""
+
+            if (binding.etPassword.text.isNullOrEmpty()){
+                Toast.makeText(this@Login, "Please input username/email", Toast.LENGTH_SHORT).show()
+            }
+            else if(binding.etUsername.text.isNullOrEmpty()){
+                Toast.makeText(this@Login, "Please input password", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val email = binding.etUsername.text.toString()
+                val password = binding.etPassword.text.toString()
+                val intent = Intent(this@Login, Home::class.java)
+
+                lifecycleScope.launch {
+                    //Online login:
+                    val user = viewModel.login(email, password)
+
+                    if (user != null) {
+                        Toast.makeText(this@Login, "Login Successful", Toast.LENGTH_LONG).show()
+
+                        //Toast.makeText(this@Login, user.email, Toast.LENGTH_LONG).show()
+
+                        sessionManager.clearSession()
+
+                        sessionManager.saveUserSession(
+                            user.userId,
+                            user.email,
+                            user.username
+                        )
+
+                        startActivity(Intent(this@Login, Home::class.java))
+                        finish()
+
+                    } else {
+                        Toast.makeText(this@Login, "Login Failed", Toast.LENGTH_LONG).show()
+                        //Offline login:
+                        sessionManager.clearSession()
+                        viewModel.onEvent(LoginEvent.Login)
+                    }
+                }
+            }
         }
     }
 

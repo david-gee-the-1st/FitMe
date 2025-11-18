@@ -26,9 +26,6 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final Button btnBiometricScan;
 
   @NonNull
-  public final Button btnGoogleLogin2;
-
-  @NonNull
   public final Button btnLogin;
 
   @NonNull
@@ -50,12 +47,11 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final TextView tvTerms;
 
   private ActivityLoginBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull Button btnBiometricScan, @NonNull Button btnGoogleLogin2, @NonNull Button btnLogin,
-      @NonNull Button btnRegisterNav, @NonNull EditText etPassword, @NonNull EditText etUsername,
-      @NonNull Toolbar loginToolbar, @NonNull CoordinatorLayout main, @NonNull TextView tvTerms) {
+      @NonNull Button btnBiometricScan, @NonNull Button btnLogin, @NonNull Button btnRegisterNav,
+      @NonNull EditText etPassword, @NonNull EditText etUsername, @NonNull Toolbar loginToolbar,
+      @NonNull CoordinatorLayout main, @NonNull TextView tvTerms) {
     this.rootView = rootView;
     this.btnBiometricScan = btnBiometricScan;
-    this.btnGoogleLogin2 = btnGoogleLogin2;
     this.btnLogin = btnLogin;
     this.btnRegisterNav = btnRegisterNav;
     this.etPassword = etPassword;
@@ -98,12 +94,6 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnGoogleLogin2;
-      Button btnGoogleLogin2 = ViewBindings.findChildViewById(rootView, id);
-      if (btnGoogleLogin2 == null) {
-        break missingId;
-      }
-
       id = R.id.btnLogin;
       Button btnLogin = ViewBindings.findChildViewById(rootView, id);
       if (btnLogin == null) {
@@ -142,9 +132,8 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((CoordinatorLayout) rootView, btnBiometricScan,
-          btnGoogleLogin2, btnLogin, btnRegisterNav, etPassword, etUsername, loginToolbar, main,
-          tvTerms);
+      return new ActivityLoginBinding((CoordinatorLayout) rootView, btnBiometricScan, btnLogin,
+          btnRegisterNav, etPassword, etUsername, loginToolbar, main, tvTerms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

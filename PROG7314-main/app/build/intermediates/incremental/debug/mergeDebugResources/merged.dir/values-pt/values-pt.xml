@@ -27,6 +27,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Compartilhar com <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Recolher"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Senha"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Chave de acesso"</string>
     <string msgid="2102429900219199821" name="biometric_or_screen_lock_prompt_message">"Use a biometria ou o bloqueio de tela para continuar"</string>
     <string msgid="1160635338192065472" name="biometric_prompt_message">"Use a biometria para continuar"</string>
     <string msgid="881409763997275156" name="call_notification_answer_action">"Atender"</string>
@@ -37,9 +39,13 @@
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Chamada em andamento"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Filtrando uma ligação recebida"</string>
     <string msgid="5912733858573823945" name="confirm_device_credential_password">"Usar senha"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Link copiado para a área de transferência"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"Erro desconhecido"</string>
     <string msgid="4562557128765735254" name="face_or_screen_lock_prompt_message">"Use seu rosto ou o bloqueio de tela para continuar"</string>
     <string msgid="2282389249605674226" name="face_prompt_message">"Use seu rosto para continuar"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Copiar link"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Abrir no navegador"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Compartilhar link"</string>
     <string msgid="5462024216548165325" name="fingerprint_dialog_icon_description">"Ícone de impressão digital"</string>
     <string msgid="1072308044213194243" name="fingerprint_dialog_touch_sensor">"Toque no sensor de digital"</string>
     <string msgid="8216738333501875566" name="fingerprint_error_hw_not_available">"Hardware de impressão digital não disponível."</string>

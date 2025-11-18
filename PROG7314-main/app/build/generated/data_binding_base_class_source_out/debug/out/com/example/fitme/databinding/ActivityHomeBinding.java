@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +21,7 @@ import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final BottomNavigationView bottomNavigationView;
@@ -42,7 +42,7 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final ImageButton btnLegs;
 
   @NonNull
-  public final LinearLayout main;
+  public final RelativeLayout main;
 
   @NonNull
   public final RecyclerView rvImages;
@@ -56,10 +56,10 @@ public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
   public final TextView tvImagesViewAll;
 
-  private ActivityHomeBinding(@NonNull LinearLayout rootView,
+  private ActivityHomeBinding(@NonNull RelativeLayout rootView,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull ImageButton btnAbs,
       @NonNull ImageButton btnArms, @NonNull ImageButton btnBack, @NonNull ImageButton btnChest,
-      @NonNull ImageButton btnLegs, @NonNull LinearLayout main, @NonNull RecyclerView rvImages,
+      @NonNull ImageButton btnLegs, @NonNull RelativeLayout main, @NonNull RecyclerView rvImages,
       @NonNull Toolbar settingsToolbar, @NonNull TextView tvExercisesViewAll,
       @NonNull TextView tvImagesViewAll) {
     this.rootView = rootView;
@@ -78,7 +78,7 @@ public final class ActivityHomeBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -139,7 +139,7 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      LinearLayout main = (LinearLayout) rootView;
+      RelativeLayout main = (RelativeLayout) rootView;
 
       id = R.id.rvImages;
       RecyclerView rvImages = ViewBindings.findChildViewById(rootView, id);
@@ -165,8 +165,8 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHomeBinding((LinearLayout) rootView, bottomNavigationView, btnAbs, btnArms,
-          btnBack, btnChest, btnLegs, main, rvImages, settingsToolbar, tvExercisesViewAll,
+      return new ActivityHomeBinding((RelativeLayout) rootView, bottomNavigationView, btnAbs,
+          btnArms, btnBack, btnChest, btnLegs, main, rvImages, settingsToolbar, tvExercisesViewAll,
           tvImagesViewAll);
     }
     String missingId = rootView.getResources().getResourceName(id);

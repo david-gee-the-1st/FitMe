@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "331319722062",
+    "firebase_url": "https://fitme-012-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fitme-012",
+    "storage_bucket": "fitme-012.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331319722062:android:e9440c1e33faf64a5d831f",
+        "android_client_info": {
+          "package_name": "com.example.fitme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPVsPrawHYgrJ0Ozc1-dSPbhp3YLNM8wc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

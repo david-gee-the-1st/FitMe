@@ -3,6 +3,7 @@ package com.example.fitme
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -51,6 +52,7 @@ class Register : AppCompatActivity() {
 
         setupEventListeners()
         observeViewModel()
+        setupClickListeners()
     }
 
     private fun setupEventListeners() {
@@ -69,15 +71,52 @@ class Register : AppCompatActivity() {
         // Date of Birth field click -> show DatePickerDialog
         binding.etDob.setOnClickListener { showDatePicker() }
 
-        // Register button
-        binding.btnRegister.setOnClickListener {
-            viewModel.onEvent(UserEvent.setDob(dob)) // set selected DOB before saving
-            viewModel.onEvent(UserEvent.createUser)
-        }
-
         // Navigate to Login Activity
         binding.btnLoginNav.setOnClickListener {
             startActivity(Intent(this, Login::class.java))
+        }
+    }
+
+    private fun setupClickListeners() {
+        // Register button
+        binding.btnRegister.setOnClickListener {
+            var flag : Boolean = false
+
+            var userName = ""
+            var email = ""
+            var password = ""
+            var height = 0.0
+            var weight = 0.0
+            var dob = ""
+            var phone = ""
+
+            try{
+                userName = binding.etUsername.text.toString()
+                email =  binding.etEmail.text.toString()
+                password =  binding.etPassword.text.toString()
+                height = (binding.etHeight.text.toString()).toDouble()
+                weight = (binding.etWeight.text.toString()).toDouble()
+                dob = binding.etDob.text.toString()
+                phone = binding.etPhone.text.toString()
+            }
+            catch (e: Error){
+                Log.d("Create acc", "create user fail: ${e.message}")
+            }
+
+            //creating online account using addUser or offline account
+            lifecycleScope.launch {
+                flag = viewModel.addUser(userName, password, email, height, weight, dob, phone)
+                if (flag) {
+                    Toast.makeText(this@Register, "Online Account created!", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this@Register, "Can't create Online Account", Toast.LENGTH_LONG).show()
+                    viewModel.onEvent(UserEvent.setDob(dob)) // set selected DOB before saving
+                    viewModel.onEvent(UserEvent.createUser)
+                }
+            }
+
+            startActivity(Intent(this, Login::class.java))
+
         }
     }
 

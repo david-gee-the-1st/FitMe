@@ -4,6 +4,7 @@ plugins {
     id("androidx.navigation.safeargs")
     id("kotlin-kapt")
     id("com.google.devtools.ksp") version "2.0.21-1.0.25"
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -82,6 +83,13 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
+
     //Biometric Authentication:
     implementation("androidx.biometric:biometric-ktx:1.4.0-alpha02")
+
+    //Realtime Firebase Database:
+    implementation(libs.firebase.database)
+    implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation(libs.google.firebase.firestore)
 }

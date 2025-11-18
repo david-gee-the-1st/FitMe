@@ -31,8 +31,6 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"分享对象"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"与<ns1:g id="APPLICATION_NAME">%s</ns1:g>分享"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"收起"</string>
-    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"密码"</string>
-    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"通行密钥"</string>
     <string msgid="2102429900219199821" name="biometric_or_screen_lock_prompt_message">"使用生物识别或屏幕锁定解锁凭据验证身份后，才能继续"</string>
     <string msgid="1160635338192065472" name="biometric_prompt_message">"使用生物识别验证身份后，才能继续"</string>
     <string name="bottomsheet_action_collapse">收起底部动作条</string>
@@ -50,34 +48,12 @@
     <string name="character_counter_content_description">输入了 %1$d 个字符（上限为 %2$d 个）</string>
     <string name="character_counter_overflowed_content_description">超出字符数限制（共 %1$d 个，上限为 %2$d 个）</string>
     <string name="clear_text_end_icon_content_description">清除文字</string>
-    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">启用</string>
-    <string msgid="227660514972886228" name="common_google_play_services_enable_text">您必须先启用 Google Play 服务，然后才能运行%1$s。</string>
-    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">启用 Google Play 服务</string>
-    <string msgid="7153882981874058840" name="common_google_play_services_install_button">安装</string>
-    <string name="common_google_play_services_install_text">您的设备没有安装 Google Play 服务，因此无法运行%1$s。</string>
-    <string msgid="7215213145546190223" name="common_google_play_services_install_title">获取 Google Play 服务</string>
-    <string name="common_google_play_services_notification_channel_name">Google Play 服务的适用范围</string>
-    <string name="common_google_play_services_notification_ticker">Google Play服务出错</string>
-    <string name="common_google_play_services_unknown_issue">%1$s无法访问 Google Play 服务，请重试。</string>
-    <string name="common_google_play_services_unsupported_text">您的设备不支持 Google Play 服务，因此无法运行%1$s。</string>
-    <string msgid="6556509956452265614" name="common_google_play_services_update_button">更新</string>
-    <string msgid="9053896323427875356" name="common_google_play_services_update_text">您必须先更新 Google Play 服务，然后才能运行%1$s。</string>
-    <string msgid="6006316683626838685" name="common_google_play_services_update_title">更新 Google Play 服务</string>
-    <string name="common_google_play_services_updating_text">Google Play 服务当前正在更新，因此您无法运行%1$s。</string>
-    <string name="common_google_play_services_wear_update_text">必须使用新版 Google Play 服务。该服务很快就会自行更新。</string>
-    <string name="common_open_on_phone">在手机上打开</string>
-    <string name="common_signin_button_text">登录</string>
-    <string name="common_signin_button_text_long">使用 Google 帐号登录</string>
     <string msgid="5912733858573823945" name="confirm_device_credential_password">"使用密码"</string>
-    <string msgid="3260749812566568062" name="copy_toast_msg">"链接已复制到剪贴板"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"未知错误"</string>
     <string name="error_icon_content_description">错误</string>
     <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
     <string msgid="4562557128765735254" name="face_or_screen_lock_prompt_message">"刷脸验证或使用屏幕锁定解锁凭据验证身份后，才能继续"</string>
     <string msgid="2282389249605674226" name="face_prompt_message">"刷脸验证身份后，才能继续"</string>
-    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"复制链接"</string>
-    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"在浏览器中打开"</string>
-    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"分享链接"</string>
     <string msgid="5462024216548165325" name="fingerprint_dialog_icon_description">"指纹图标"</string>
     <string msgid="1072308044213194243" name="fingerprint_dialog_touch_sensor">"请轻触指纹传感器"</string>
     <string msgid="8216738333501875566" name="fingerprint_error_hw_not_available">"指纹硬件无法使用。"</string>

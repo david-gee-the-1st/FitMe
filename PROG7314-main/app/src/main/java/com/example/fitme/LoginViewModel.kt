@@ -5,42 +5,16 @@ import android.util.Patterns
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.firestore
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
 import java.security.MessageDigest
 
 class LoginViewModel(private val dao: UserDao) : ViewModel() {
     private val _loginState = MutableStateFlow(LoginState())
     val loginState = _loginState.asStateFlow()
     private var _loggedInUser: User? = null
-    private lateinit var auth: FirebaseAuth
-
-    //added function to log user in through firebase auth (Firebase, 2025):
-    suspend fun login( email: String, password: String): User? {
-        try {
-            val auth = FirebaseAuth.getInstance()
-            auth.signInWithEmailAndPassword(email, password).await()
-
-            val uid = auth.currentUser?.uid?: throw Exception("User is empty")
-
-            //get the user's details (Firebase, 2025):
-            val db = Firebase.firestore
-            val userDoc = db.collection("Users").document(uid).get().await()
-
-
-            return userDoc.toObject(User::class.java)
-        } catch (e: Exception) {
-            // Toast.makeText(this, "Sign up failed: ${it.message}", Toast.LENGTH_SHORT).show()
-            Log.d("Login Fail", "$e")
-            return null
-        }
-    }
 
     fun hasPass(hashPassword : String): String
     {
@@ -151,10 +125,7 @@ class LoginViewModel(private val dao: UserDao) : ViewModel() {
         }
     }
 }
-
 /*
 Reference list:
 The FULL Beginner Guide for Room in Android | Local Database Tutorial for Android. 2023. YouTube video, added by Philipp Lackner. [Online]. Available at: https://www.youtube.com/watch?v=bOd3wO0uFr8 [Accessed 22 September 2025].
-Firebase. 2025. Authenticate with Firebase using Password-Based Accounts on Android. [Online]. Available at: https://firebase.google.com/docs/auth/android/password-auth [Accessed 22 May 2025].
-Mohsen Mashkour, 2023. How to send data to the Firebase Realtime database. Android studio Kotlin. [video online]. Available at: https://www.youtube.com/watch?v=3XiZF1UBn50&list=PLEGrY4uRTu5ls7Mq7h6RcdKGFdQVqy0KZ&index=2&ab_channel=MohsenMashkour [Accessed 22 May 2025].
  */

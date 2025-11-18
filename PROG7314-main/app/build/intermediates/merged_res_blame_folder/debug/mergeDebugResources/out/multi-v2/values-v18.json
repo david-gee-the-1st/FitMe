@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.fitme.app-mergeDebugResources-60:/values-v18/values-v18.xml",
+            "outputFile": "com.example.fitme.app-mergeDebugResources-47:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\caches\\8.13\\transforms\\66661b3d1ee1f806f3cb4917c553b6f3\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\johne_7vfoxxi\\.gradle\\caches\\8.13\\transforms\\875f7e100e11ebfe292f5677c9df2ae7\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

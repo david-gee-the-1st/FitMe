@@ -33,8 +33,6 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Bendrinti su"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Bendrinti naudojant programą „<ns1:g id="APPLICATION_NAME">%s</ns1:g>“"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Sutraukti"</string>
-    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Slaptažodis"</string>
-    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Passkey"</string>
     <string msgid="2102429900219199821" name="biometric_or_screen_lock_prompt_message">"Jei norite tęsti, naudokite biometrinius duomenis arba ekrano užraktą"</string>
     <string msgid="1160635338192065472" name="biometric_prompt_message">"Norėdami tęsti, naudokite biometrinius duomenis"</string>
     <string name="bottomsheet_action_collapse">Sutraukti apatinį lapą</string>
@@ -52,34 +50,12 @@
     <string name="character_counter_content_description">Įvesta simbolių: %1$d iš %2$d</string>
     <string name="character_counter_overflowed_content_description">Viršytas simbolių skaičius: %1$d iš %2$d</string>
     <string name="clear_text_end_icon_content_description">Išvalyti tekstą</string>
-    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Įgalinti</string>
-    <string msgid="227660514972886228" name="common_google_play_services_enable_text">„%1$s“ neveiks, jei neįgalinsite „Google Play“ paslaugų.</string>
-    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Įgalinkite „Google Play“ paslaugas</string>
-    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Įdiegti</string>
-    <string name="common_google_play_services_install_text">Programa „%1$s“ nebus paleidžiama be „Google Play“ paslaugų, kurių nėra įrenginyje.</string>
-    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Gaukite „Google Play“ paslaugas</string>
-    <string name="common_google_play_services_notification_channel_name">„Google Play“ paslaugų pasiekiamumas</string>
-    <string name="common_google_play_services_notification_ticker">„Google Play“ paslaugų klaida</string>
-    <string name="common_google_play_services_unknown_issue">Naudojant programą „%1$s“ kilo problemų dėl „Google Play“ paslaugų. Bandykite dar kartą.</string>
-    <string name="common_google_play_services_unsupported_text">Programa „%1$s“ nebus paleidžiama be „Google Play“ paslaugų, kurių jūsų įrenginys nepalaiko.</string>
-    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Atnaujinti</string>
-    <string msgid="9053896323427875356" name="common_google_play_services_update_text">„%1$s“ nebus paleidžiama, jei neatnaujinsite „Google Play“ paslaugų.</string>
-    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Atnaujinkite „Google Play“ paslaugas</string>
-    <string name="common_google_play_services_updating_text">„%1$s“ nebus paleidžiama be „Google Play“ paslaugų, kurios šiuo metu atnaujinamos.</string>
-    <string name="common_google_play_services_wear_update_text">Reikia naujos versijos „Google Play“ paslaugų. Jos netrukus bus atnaujintos.</string>
-    <string name="common_open_on_phone">Atidaryti telefone</string>
-    <string name="common_signin_button_text">Prisijungti</string>
-    <string name="common_signin_button_text_long">Prisijungti naudojant „Google“</string>
     <string msgid="5912733858573823945" name="confirm_device_credential_password">"Naudoti slaptažodį"</string>
-    <string msgid="3260749812566568062" name="copy_toast_msg">"Nuoroda nukopijuota į iškarpinę"</string>
     <string msgid="4776854077120974966" name="default_error_msg">"Nežinoma klaida"</string>
     <string name="error_icon_content_description">Klaida</string>
     <string name="exposed_dropdown_menu_content_description">Rodyti išskleidžiamąjį meniu</string>
     <string msgid="4562557128765735254" name="face_or_screen_lock_prompt_message">"Jei norite tęsti, naudokite veido atpažinimo funkciją arba ekrano užraktą"</string>
     <string msgid="2282389249605674226" name="face_prompt_message">"Jei norite tęsti, naudokite veido atpažinimo funkciją"</string>
-    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopijuoti nuorodą"</string>
-    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Atidaryti naršyklėje"</string>
-    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Bendrinti nuorodą"</string>
     <string msgid="5462024216548165325" name="fingerprint_dialog_icon_description">"Kontrolinio kodo piktograma"</string>
     <string msgid="1072308044213194243" name="fingerprint_dialog_touch_sensor">"Palieskite piršto antspaudo jutiklį"</string>
     <string msgid="8216738333501875566" name="fingerprint_error_hw_not_available">"Piršto antspaudo aparatinė įranga nepasiekiama."</string>

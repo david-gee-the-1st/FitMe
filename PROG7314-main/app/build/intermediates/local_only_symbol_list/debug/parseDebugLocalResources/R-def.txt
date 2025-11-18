@@ -52,6 +52,7 @@ id btnBiometricScan
 id btnChangePassword
 id btnChest
 id btnEditProfile
+id btnGoogleLogin2
 id btnLegs
 id btnLogin
 id btnLoginNav
@@ -158,14 +159,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
 string app_name
-string firebase_database_url
-string gcm_defaultSenderId
-string google_api_key
-string google_app_id
-string google_crash_reporting_api_key
-string google_storage_bucket
 string hello_blank_fragment
-string project_id
 style Base.Theme.FitMe
 style Theme.FitMe
 xml backup_rules

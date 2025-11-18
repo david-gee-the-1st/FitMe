@@ -115,6 +115,15 @@
                 android:textColor="@color/black" />
 
             <!-- Terms & Conditions -->
+            <Button
+                android:id="@+id/btnGoogleLogin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+
+                android:backgroundTint="@android:color/white"
+                android:text="Continue with Google"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/btnRegisterNav"

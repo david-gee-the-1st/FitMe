@@ -6,14 +6,7 @@
     <color name="progress_bar">#8A2D2F</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">FitMe</string>
-    <string name="firebase_database_url" translatable="false">https://fitme-012-default-rtdb.europe-west1.firebasedatabase.app</string>
-    <string name="gcm_defaultSenderId" translatable="false">331319722062</string>
-    <string name="google_api_key" translatable="false">AIzaSyAPVsPrawHYgrJ0Ozc1-dSPbhp3YLNM8wc</string>
-    <string name="google_app_id" translatable="false">1:331319722062:android:e9440c1e33faf64a5d831f</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAPVsPrawHYgrJ0Ozc1-dSPbhp3YLNM8wc</string>
-    <string name="google_storage_bucket" translatable="false">fitme-012.firebasestorage.app</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="project_id" translatable="false">fitme-012</string>
     <style name="Base.Theme.FitMe" parent="Theme.Material3.DayNight.NoActionBar">
         
         
